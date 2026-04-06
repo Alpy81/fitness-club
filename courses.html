@@ -1,0 +1,1339 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="FIT Training Center – Kurse & Kursplan. Über 35 Kurse pro Woche." />
+    <title>FIT Training Center — Kurse & Kursplan</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Barlow+Condensed:wght@400;600;700&display=swap"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/basic.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/courses.css" />
+  </head>
+  <body>
+    <div class="progress-bar"></div>
+
+    <!-- ── NAVIGATION ──────────────────────────────────────── -->
+    <nav class="navbar">
+      <div class="container">
+        <a href="index.html" class="nav-logo">
+          <img src="assets/logo.svg" alt="FIT Training Center" />
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">Über uns</a></li>
+          <li><a href="courses.html" class="active">Kurse</a></li>
+          <li><a href="membership.html">Mitgliedschaft</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
+        </ul>
+        <a href="membership.html" class="nav-cta">Jetzt starten</a>
+        <button class="nav-hamburger" aria-label="Menü öffnen">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <nav class="nav-mobile">
+      <a href="index.html">Home</a>
+      <a href="about.html">Über uns</a>
+      <a href="courses.html">Kurse</a>
+      <a href="membership.html">Mitgliedschaft</a>
+      <a href="team.html">Team</a>
+      <a href="contact.html">Kontakt</a>
+      <a href="membership.html" class="nav-cta-mobile">Jetzt starten</a>
+    </nav>
+
+    <!-- ── PAGE HERO ────────────────────────────────────────── -->
+    <section class="page-hero">
+      <div class="page-hero-bg">
+        <img src="assets/strength.jpg" alt="Kurse" data-parallax="0.3" />
+      </div>
+      <div class="page-hero-content">
+        <div class="container">
+          <div class="page-hero-eyebrow"><span>Unser Angebot</span></div>
+          <h1 class="page-hero-title">Kurse &<br /><em>Kursplan.</em></h1>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FILTER BAR ────────────────────────────────────────── -->
+    <div class="filter-bar">
+      <div class="container">
+        <div class="filter-inner">
+          <button class="filter-btn active" data-filter="all">
+            Alle Kurse
+          </button>
+          <button class="filter-btn" data-filter="kraft">Kraft</button>
+          <button class="filter-btn" data-filter="cardio">Cardio</button>
+          <button class="filter-btn" data-filter="cycling">Cycling</button>
+          <button class="filter-btn" data-filter="yoga">Yoga & Mind</button>
+          <button class="filter-btn" data-filter="hiit">HIIT</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── COURSES GRID ──────────────────────────────────────── -->
+    <section class="courses-section">
+      <div class="container">
+        <div class="courses-section-header">
+          <div>
+            <span class="section-label">Unsere Kurse</span>
+            <h2 class="section-title">Finde deinen<br />Kurs.</h2>
+          </div>
+          <h5
+            style="
+              color: var(--clr-accent);
+              font-size: 0.9rem;
+              max-width: 300px;
+              text-align: right;
+            ">
+            Alle Kurse sind in der Pro & Elite Mitgliedschaft inklusive.
+          </h5>
+        </div>
+
+        <div class="courses-grid" id="coursesGrid">
+          <!-- Cardio Blast -->
+          <div class="course-card reveal" data-category="cardio">
+            <div class="course-card-img">
+              <img src="assets/cardio-blast.jpg" alt="Cardio Blast" />
+              <div class="course-intensity">
+                <div class="intensity-dot active"></div>
+                <div class="intensity-dot active"></div>
+                <div class="intensity-dot"></div>
+              </div>
+              <span class="course-category-tag">Cardio</span>
+            </div>
+            <div class="course-card-body">
+              <h3 class="course-card-title">Cardio Blast</h3>
+              <p class="course-card-desc">
+                Intensive Ausdauereinheit mit wechselnden Intervallen. Maximaler
+                Kalorienverbrauch, maximaler Spaß.
+              </p>
+              <div class="course-card-meta">
+                <div class="course-meta-item">
+                  <i class="fas fa-clock"></i> 45 Min
+                </div>
+                <div class="course-meta-item">
+                  <i class="fas fa-signal"></i> Alle Level
+                </div>
+                <div class="course-meta-item">
+                  <i class="fas fa-users"></i> Max. 20
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Treadmill Run -->
+          <div class="course-card reveal" data-category="cardio">
+            <div class="course-card-img">
+              <img src="assets/treadmill-run.jpg" alt="Treadmill Run" />
+              <div class="course-intensity">
+                <div class="intensity-dot active"></div>
+                <div class="intensity-dot active"></div>
+                <div class="intensity-dot"></div>
+              </div>
+              <span class="course-category-tag">Cardio</span>
+            </div>
+            <div class="course-card-body">
+              <h3 class="course-card-title">Treadmill Run</h3>
+              <p class="course-card-desc">
+                Geführtes Laufband-Training mit wechselnden Tempoeinheiten.
+                Ideal für Läufer aller Niveaus.
+              </p>
+              <div class="course-card-meta">
+                <div class="course-meta-item">
+                  <i class="fas fa-clock"></i> 40 Min
+                </div>
+                <div class="course-meta-item">
+                  <i class="fas fa-signal"></i> Alle Level
+                </div>
+                <div class="course-meta-item">
+                  <i class="fas fa-users"></i> Max. 15
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cardio Box -->
+          <div class="course-card reveal" data-category="cardio">
+            <div class="course-card-img">
+              <img src="assets/cardio-box.jpg" alt="Cardio Box" />
+              <div class="course-intensity">
+                <div class="intensity-dot active"></div>
+                <div class="intensity-dot active"></div>
+                <div class="intensity-dot active"></div>
+              </div>
+              <span class="course-category-tag">Cardio</span>
+            </div>
+            <div class="course-card-body">
+              <h3 class="course-card-title">Cardio Box</h3>
+              <p class="course-card-desc">
+                Boxinspiriertes Cardio-Training — Kombis, Hooks und Kicks für
+                maximalen Kalorienverbrauch und Koordination.
+              </p>
+              <div class="course-card-meta">
+                <div class="course-meta-item">
+                  <i class="fas fa-clock"></i> 50 Min
+                </div>
+                <div class="course-meta-item">
+                  <i class="fas fa-signal"></i> Alle Level
+                </div>
+                <div class="course-meta-item">
+                  <i class="fas fa-users"></i> Max. 18
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Power Lift -->
+          <div class="course-card reveal" data-category="kraft">
+            <div class="course-card-img">
+              <img src="assets/power-lift.jpg" alt="Power Lift" />
+              <div class="course-intensity">
+                <div class="intensity-dot active"></div>
+                <div class="intensity-dot active"></div>
+                <div class="intensity-dot active"></div>
+              </div>
+              <span class="course-category-tag">Kraft</span>
+            </div>
+            <div class="course-card-body">
+              <h3 class="course-card-title">Power Lift</h3>
+              <p class="course-card-desc">
+                Schwere Gewichte, klare Technik. Dieser Kurs baut Muskelmasse
+                auf und macht dich messbar stärker.
+              </p>
+              <div class="course-card-meta">
+                <div class="course-meta-item">
+                  <i class="fas fa-clock"></i> 60 Min
+                </div>
+                <div class="course-meta-item">
+                  <i class="fas fa-signal"></i> Fortgeschritten
+                </div>
+                <div class="course-meta-item">
+                  <i class="fas fa-users"></i> Max. 12
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Spin Cycle -->
+          <div class="course-card reveal" data-category="cycling">
+            <div class="course-card-img">
+              <img src="assets/spin-cycle.jpg" alt="Spin Cycle" />
+              <div class="course-intensity">
+                <div class="intensity-dot active"></div>
+                <div class="intensity-dot active"></div>
+                <div class="intensity-dot active"></div>
+              </div>
+              <span class="course-category-tag">Cycling</span>
+            </div>
+            <div class="course-card-body">
+              <h3 class="course-card-title">Spin Cycle</h3>
+              <p class="course-card-desc">
+                Rhythmisches Indoor-Cycling auf höchstem Niveau. Musik, Energie
+                und Gemeinschaft pur.
+              </p>
+              <div class="course-card-meta">
+                <div class="course-meta-item">
+                  <i class="fas fa-clock"></i> 45 Min
+                </div>
+                <div class="course-meta-item">
+                  <i class="fas fa-signal"></i> Alle Level
+                </div>
+                <div class="course-meta-item">
+                  <i class="fas fa-users"></i> Max. 18
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bike Attack -->
+          <div class="course-card reveal" data-category="cycling">
+            <div class="course-card-img">
+              <img src="assets/bike-attack.jpg" alt="Bike Attack" />
+              <div class="course-intensity">
+                <div class="intensity-dot active"></div>
+                <div class="intensity-dot active"></div>
+                <div class="intensity-dot active"></div>
+              </div>
+              <span class="course-category-tag">Cycling</span>
+            </div>
+            <div class="course-card-body">
+              <h3 class="course-card-title">Bike Attack</h3>
+              <p class="course-card-desc">
+                Hochintensives Cycling mit kurzen Sprints und Bergpassagen.
+                Maximale Leistung auf dem Bike.
+              </p>
+              <div class="course-card-meta">
+                <div class="course-meta-item">
+                  <i class="fas fa-clock"></i> 50 Min
+                </div>
+                <div class="course-meta-item">
+                  <i class="fas fa-signal"></i> Fortgeschritten
+                </div>
+                <div class="course-meta-item">
+                  <i class="fas fa-users"></i> Max. 16
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Easy Ride -->
+          <div class="course-card reveal" data-category="cycling">
+            <div class="course-card-img">
+              <img src="assets/easy-ride.jpg" alt="Easy Ride" />
+              <div class="course-intensity">
+                <div class="intensity-dot active"></div>
+                <div class="intensity-dot"></div>
+                <div class="intensity-dot"></div>
+              </div>
+              <span class="course-category-tag">Cycling</span>
+            </div>
+            <div class="course-card-body">
+              <h3 class="course-card-title">Easy Ride</h3>
+              <p class="course-card-desc">
+                Entspanntes Ausdauer-Cycling im moderaten Tempo. Perfekt für
+                Einsteiger oder als aktive Regeneration.
+              </p>
+              <div class="course-card-meta">
+                <div class="course-meta-item">
+                  <i class="fas fa-clock"></i> 40 Min
+                </div>
+                <div class="course-meta-item">
+                  <i class="fas fa-signal"></i> Einsteiger
+                </div>
+                <div class="course-meta-item">
+                  <i class="fas fa-users"></i> Max. 20
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- HIIT Storm -->
+          <div class="course-card reveal" data-category="hiit">
+            <div class="course-card-img">
+              <img src="assets/intervall.jpg" alt="HIIT Storm" />
+              <div class="course-intensity">
+                <div class="intensity-dot active"></div>
+                <div class="intensity-dot active"></div>
+                <div class="intensity-dot active"></div>
+              </div>
+              <span class="course-category-tag">HIIT</span>
+            </div>
+            <div class="course-card-body">
+              <h3 class="course-card-title">HIIT Storm</h3>
+              <p class="course-card-desc">
+                High Intensity Interval Training — kurze Pausen, maximale
+                Leistung. Effektiv, effizient, brutal gut.
+              </p>
+              <div class="course-card-meta">
+                <div class="course-meta-item">
+                  <i class="fas fa-clock"></i> 30 Min
+                </div>
+                <div class="course-meta-item">
+                  <i class="fas fa-signal"></i> Fortgeschritten
+                </div>
+                <div class="course-meta-item">
+                  <i class="fas fa-users"></i> Max. 15
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Battle Rope -->
+          <div class="course-card reveal" data-category="hiit">
+            <div class="course-card-img">
+              <img src="assets/battle-rope.jpg" alt="Battle Rope" />
+              <div class="course-intensity">
+                <div class="intensity-dot active"></div>
+                <div class="intensity-dot active"></div>
+                <div class="intensity-dot active"></div>
+              </div>
+              <span class="course-category-tag">HIIT</span>
+            </div>
+            <div class="course-card-body">
+              <h3 class="course-card-title">Battle Rope</h3>
+              <p class="course-card-desc">
+                Explosives Seiltraining mit maximaler Ganzkörperbeanspruchung.
+                Schultern, Core und Ausdauer werden in Intervallen bis ans Limit
+                gefordert.
+              </p>
+              <div class="course-card-meta">
+                <div class="course-meta-item">
+                  <i class="fas fa-clock"></i> 40 Min
+                </div>
+                <div class="course-meta-item">
+                  <i class="fas fa-signal"></i> Alle Level
+                </div>
+                <div class="course-meta-item">
+                  <i class="fas fa-users"></i> Max. 14
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Circuit Training -->
+          <div class="course-card reveal" data-category="hiit">
+            <div class="course-card-img">
+              <img src="assets/circuit-training.jpg" alt="Circuit Training" />
+              <div class="course-intensity">
+                <div class="intensity-dot active"></div>
+                <div class="intensity-dot active"></div>
+                <div class="intensity-dot"></div>
+              </div>
+              <span class="course-category-tag">HIIT</span>
+            </div>
+            <div class="course-card-body">
+              <h3 class="course-card-title">Circuit Training</h3>
+              <p class="course-card-desc">
+                Stationen-basiertes Ganzkörper-Training mit Kurzhanteln, Seilen
+                und Körpergewicht. Ausdauer trifft Kraft.
+              </p>
+              <div class="course-card-meta">
+                <div class="course-meta-item">
+                  <i class="fas fa-clock"></i> 45 Min
+                </div>
+                <div class="course-meta-item">
+                  <i class="fas fa-signal"></i> Alle Level
+                </div>
+                <div class="course-meta-item">
+                  <i class="fas fa-users"></i> Max. 16
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Body Pump -->
+          <div class="course-card reveal" data-category="kraft">
+            <div class="course-card-img">
+              <img src="assets/body-pump.jpg" alt="Body Pump" />
+              <div class="course-intensity">
+                <div class="intensity-dot active"></div>
+                <div class="intensity-dot active"></div>
+                <div class="intensity-dot"></div>
+              </div>
+              <span class="course-category-tag">Kraft</span>
+            </div>
+            <div class="course-card-body">
+              <h3 class="course-card-title">Body Pump</h3>
+              <p class="course-card-desc">
+                Ganzkörper-Kraftkurs mit der Langhantel. Perfekte
+                Einsteiger-Option für funktionelles Krafttraining.
+              </p>
+              <div class="course-card-meta">
+                <div class="course-meta-item">
+                  <i class="fas fa-clock"></i> 55 Min
+                </div>
+                <div class="course-meta-item">
+                  <i class="fas fa-signal"></i> Einsteiger
+                </div>
+                <div class="course-meta-item">
+                  <i class="fas fa-users"></i> Max. 20
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Deadlift Pro -->
+          <div class="course-card reveal" data-category="kraft">
+            <div class="course-card-img">
+              <img src="assets/dead-lift-pro.jpg" alt="Deadlift Pro" />
+              <div class="course-intensity">
+                <div class="intensity-dot active"></div>
+                <div class="intensity-dot active"></div>
+                <div class="intensity-dot active"></div>
+              </div>
+              <span class="course-category-tag">Kraft</span>
+            </div>
+            <div class="course-card-body">
+              <h3 class="course-card-title">Deadlift Pro</h3>
+              <p class="course-card-desc">
+                Fokus auf die Königsdisziplin des Kraftsports. Technik, Kraft
+                und maximale Progression in einer Stunde.
+              </p>
+              <div class="course-card-meta">
+                <div class="course-meta-item">
+                  <i class="fas fa-clock"></i> 60 Min
+                </div>
+                <div class="course-meta-item">
+                  <i class="fas fa-signal"></i> Fortgeschritten
+                </div>
+                <div class="course-meta-item">
+                  <i class="fas fa-users"></i> Max. 10
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Yoga Flow -->
+          <div class="course-card reveal" data-category="yoga">
+            <div class="course-card-img">
+              <img src="assets/yoga-flow.jpg" alt="Yoga Flow" />
+              <div class="course-intensity">
+                <div class="intensity-dot active"></div>
+                <div class="intensity-dot"></div>
+                <div class="intensity-dot"></div>
+              </div>
+              <span class="course-category-tag">Yoga & Mind</span>
+            </div>
+            <div class="course-card-body">
+              <h3 class="course-card-title">Yoga Flow</h3>
+              <p class="course-card-desc">
+                Bewegung trifft Atemarbeit. Dieser Kurs verbessert Flexibilität,
+                Körpergefühl und mentale Stärke.
+              </p>
+              <div class="course-card-meta">
+                <div class="course-meta-item">
+                  <i class="fas fa-clock"></i> 60 Min
+                </div>
+                <div class="course-meta-item">
+                  <i class="fas fa-signal"></i> Alle Level
+                </div>
+                <div class="course-meta-item">
+                  <i class="fas fa-users"></i> Max. 16
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Yin Yoga -->
+          <div class="course-card reveal" data-category="yoga">
+            <div class="course-card-img">
+              <img src="assets/yin-yoga.jpg" alt="Yin Yoga" />
+              <div class="course-intensity">
+                <div class="intensity-dot active"></div>
+                <div class="intensity-dot"></div>
+                <div class="intensity-dot"></div>
+              </div>
+              <span class="course-category-tag">Yoga & Mind</span>
+            </div>
+            <div class="course-card-body">
+              <h3 class="course-card-title">Yin Yoga</h3>
+              <p class="course-card-desc">
+                Tiefes passives Dehnen mit langen Haltepositionen. Löst
+                Verspannungen, beruhigt das Nervensystem und fördert
+                Regeneration.
+              </p>
+              <div class="course-card-meta">
+                <div class="course-meta-item">
+                  <i class="fas fa-clock"></i> 60 Min
+                </div>
+                <div class="course-meta-item">
+                  <i class="fas fa-signal"></i> Alle Level
+                </div>
+                <div class="course-meta-item">
+                  <i class="fas fa-users"></i> Max. 14
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Power Yoga -->
+          <div class="course-card reveal" data-category="yoga">
+            <div class="course-card-img">
+              <img src="assets/power-yoga.jpg" alt="Power Yoga" />
+              <div class="course-intensity">
+                <div class="intensity-dot active"></div>
+                <div class="intensity-dot active"></div>
+                <div class="intensity-dot"></div>
+              </div>
+              <span class="course-category-tag">Yoga & Mind</span>
+            </div>
+            <div class="course-card-body">
+              <h3 class="course-card-title">Power Yoga</h3>
+              <p class="course-card-desc">
+                Dynamisches Yoga mit Kraft- und Ausdauerelementen. Verbindet
+                Atemarbeit mit athletischer Bewegung für Körper und Geist.
+              </p>
+              <div class="course-card-meta">
+                <div class="course-meta-item">
+                  <i class="fas fa-clock"></i> 55 Min
+                </div>
+                <div class="course-meta-item">
+                  <i class="fas fa-signal"></i> Mittel
+                </div>
+                <div class="course-meta-item">
+                  <i class="fas fa-users"></i> Max. 14
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── KURSPLAN / SCHEDULE ───────────────────────────────── -->
+    <section class="schedule-section" id="kursplan">
+      <div class="container">
+        <div class="schedule-header reveal">
+          <span class="section-label">Wochenplan</span>
+          <h2 class="section-title">Kursplan</h2>
+          <p>Alle Zeiten sind Ortszeit Berlin. Änderungen vorbehalten.</p>
+        </div>
+
+        <!-- Day Tabs -->
+        <div class="schedule-tabs">
+          <button
+            class="schedule-tab active"
+            data-tab-btn="schedule"
+            data-tab-target="mo">
+            Mo
+          </button>
+          <button
+            class="schedule-tab"
+            data-tab-btn="schedule"
+            data-tab-target="di">
+            Di
+          </button>
+          <button
+            class="schedule-tab"
+            data-tab-btn="schedule"
+            data-tab-target="mi">
+            Mi
+          </button>
+          <button
+            class="schedule-tab"
+            data-tab-btn="schedule"
+            data-tab-target="do">
+            Do
+          </button>
+          <button
+            class="schedule-tab"
+            data-tab-btn="schedule"
+            data-tab-target="fr">
+            Fr
+          </button>
+          <button
+            class="schedule-tab"
+            data-tab-btn="schedule"
+            data-tab-target="sa">
+            Sa
+          </button>
+          <button
+            class="schedule-tab"
+            data-tab-btn="schedule"
+            data-tab-target="so">
+            So
+          </button>
+        </div>
+
+        <!-- Montag -->
+        <div
+          class="schedule-content active"
+          data-tab-content="schedule"
+          data-tab-id="mo">
+          <table class="schedule-table">
+            <thead>
+              <tr>
+                <th>Uhrzeit</th>
+                <th>Kurs</th>
+                <th>Trainer</th>
+                <th>Kategorie</th>
+                <th>Dauer</th>
+                <th>Plätze</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Zeit">07:00</td>
+                <td data-label="Kurs">
+                  <span class="schedule-course-name">Cardio Blast</span
+                  ><br /><span class="schedule-trainer">Sarah M.</span>
+                </td>
+                <td data-label="Trainer">Sarah M.</td>
+                <td data-label="Kat.">
+                  <span class="schedule-badge badge-cardio">Cardio</span>
+                </td>
+                <td data-label="Dauer">45 Min</td>
+                <td data-label="Plätze">
+                  <span class="schedule-spots spots-available">8 frei</span>
+                </td>
+                <td>
+                  <a href="booking.html" class="schedule-book-btn">Buchen</a>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Zeit">09:30</td>
+                <td data-label="Kurs">
+                  <span class="schedule-course-name">Yoga Flow</span><br /><span
+                    class="schedule-trainer"
+                    >Lisa K.</span
+                  >
+                </td>
+                <td data-label="Trainer">Lisa K.</td>
+                <td data-label="Kat.">
+                  <span class="schedule-badge badge-yoga">Yoga</span>
+                </td>
+                <td data-label="Dauer">60 Min</td>
+                <td data-label="Plätze">
+                  <span class="schedule-spots spots-available">12 frei</span>
+                </td>
+                <td>
+                  <a href="booking.html" class="schedule-book-btn">Buchen</a>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Zeit">12:00</td>
+                <td data-label="Kurs">
+                  <span class="schedule-course-name">HIIT Storm</span
+                  ><br /><span class="schedule-trainer">Marco R.</span>
+                </td>
+                <td data-label="Trainer">Marco R.</td>
+                <td data-label="Kat.">
+                  <span class="schedule-badge badge-hiit">HIIT</span>
+                </td>
+                <td data-label="Dauer">30 Min</td>
+                <td data-label="Plätze">
+                  <span class="schedule-spots spots-few">3 frei</span>
+                </td>
+                <td>
+                  <a href="booking.html" class="schedule-book-btn">Buchen</a>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Zeit">17:30</td>
+                <td data-label="Kurs">
+                  <span class="schedule-course-name">Power Lift</span
+                  ><br /><span class="schedule-trainer">Tom S.</span>
+                </td>
+                <td data-label="Trainer">Tom S.</td>
+                <td data-label="Kat.">
+                  <span class="schedule-badge badge-kraft">Kraft</span>
+                </td>
+                <td data-label="Dauer">60 Min</td>
+                <td data-label="Plätze">
+                  <span class="schedule-spots spots-available">5 frei</span>
+                </td>
+                <td>
+                  <a href="booking.html" class="schedule-book-btn">Buchen</a>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Zeit">19:00</td>
+                <td data-label="Kurs">
+                  <span class="schedule-course-name">Spin Cycle</span
+                  ><br /><span class="schedule-trainer">Nina W.</span>
+                </td>
+                <td data-label="Trainer">Nina W.</td>
+                <td data-label="Kat.">
+                  <span class="schedule-badge badge-cycling">Cycling</span>
+                </td>
+                <td data-label="Dauer">45 Min</td>
+                <td data-label="Plätze">
+                  <span class="schedule-spots spots-full">Ausgebucht</span>
+                </td>
+                <td>
+                  <button class="schedule-book-btn" disabled>Voll</button>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Zeit">20:00</td>
+                <td data-label="Kurs">
+                  <span class="schedule-course-name">Body Pump</span><br /><span
+                    class="schedule-trainer"
+                    >Sarah M.</span
+                  >
+                </td>
+                <td data-label="Trainer">Sarah M.</td>
+                <td data-label="Kat.">
+                  <span class="schedule-badge badge-kraft">Kraft</span>
+                </td>
+                <td data-label="Dauer">55 Min</td>
+                <td data-label="Plätze">
+                  <span class="schedule-spots spots-available">9 frei</span>
+                </td>
+                <td>
+                  <a href="booking.html" class="schedule-book-btn">Buchen</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Dienstag -->
+        <div
+          class="schedule-content"
+          data-tab-content="schedule"
+          data-tab-id="di">
+          <table class="schedule-table">
+            <thead>
+              <tr>
+                <th>Uhrzeit</th>
+                <th>Kurs</th>
+                <th>Trainer</th>
+                <th>Kategorie</th>
+                <th>Dauer</th>
+                <th>Plätze</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Zeit">06:30</td>
+                <td data-label="Kurs">
+                  <span class="schedule-course-name">HIIT Storm</span
+                  ><br /><span class="schedule-trainer">Marco R.</span>
+                </td>
+                <td data-label="Trainer">Marco R.</td>
+                <td data-label="Kat.">
+                  <span class="schedule-badge badge-hiit">HIIT</span>
+                </td>
+                <td data-label="Dauer">30 Min</td>
+                <td data-label="Plätze">
+                  <span class="schedule-spots spots-available">10 frei</span>
+                </td>
+                <td><button class="schedule-book-btn">Buchen</button></td>
+              </tr>
+              <tr>
+                <td data-label="Zeit">10:00</td>
+                <td data-label="Kurs">
+                  <span class="schedule-course-name">Spin Cycle</span
+                  ><br /><span class="schedule-trainer">Nina W.</span>
+                </td>
+                <td data-label="Trainer">Nina W.</td>
+                <td data-label="Kat.">
+                  <span class="schedule-badge badge-cycling">Cycling</span>
+                </td>
+                <td data-label="Dauer">45 Min</td>
+                <td data-label="Plätze">
+                  <span class="schedule-spots spots-few">2 frei</span>
+                </td>
+                <td><button class="schedule-book-btn">Buchen</button></td>
+              </tr>
+              <tr>
+                <td data-label="Zeit">18:00</td>
+                <td data-label="Kurs">
+                  <span class="schedule-course-name">Cardio Blast</span
+                  ><br /><span class="schedule-trainer">Sarah M.</span>
+                </td>
+                <td data-label="Trainer">Sarah M.</td>
+                <td data-label="Kat.">
+                  <span class="schedule-badge badge-cardio">Cardio</span>
+                </td>
+                <td data-label="Dauer">45 Min</td>
+                <td data-label="Plätze">
+                  <span class="schedule-spots spots-available">7 frei</span>
+                </td>
+                <td><button class="schedule-book-btn">Buchen</button></td>
+              </tr>
+              <tr>
+                <td data-label="Zeit">19:30</td>
+                <td data-label="Kurs">
+                  <span class="schedule-course-name">Power Lift</span
+                  ><br /><span class="schedule-trainer">Tom S.</span>
+                </td>
+                <td data-label="Trainer">Tom S.</td>
+                <td data-label="Kat.">
+                  <span class="schedule-badge badge-kraft">Kraft</span>
+                </td>
+                <td data-label="Dauer">60 Min</td>
+                <td data-label="Plätze">
+                  <span class="schedule-spots spots-full">Ausgebucht</span>
+                </td>
+                <td>
+                  <button class="schedule-book-btn" disabled>Voll</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Mittwoch -->
+        <div
+          class="schedule-content"
+          data-tab-content="schedule"
+          data-tab-id="mi">
+          <table class="schedule-table">
+            <thead>
+              <tr>
+                <th>Uhrzeit</th>
+                <th>Kurs</th>
+                <th>Trainer</th>
+                <th>Kategorie</th>
+                <th>Dauer</th>
+                <th>Plätze</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Zeit">07:00</td>
+                <td data-label="Kurs">
+                  <span class="schedule-course-name">Body Pump</span><br /><span
+                    class="schedule-trainer"
+                    >Tom S.</span
+                  >
+                </td>
+                <td data-label="Trainer">Tom S.</td>
+                <td data-label="Kat.">
+                  <span class="schedule-badge badge-kraft">Kraft</span>
+                </td>
+                <td data-label="Dauer">55 Min</td>
+                <td data-label="Plätze">
+                  <span class="schedule-spots spots-available">14 frei</span>
+                </td>
+                <td><button class="schedule-book-btn">Buchen</button></td>
+              </tr>
+              <tr>
+                <td data-label="Zeit">12:00</td>
+                <td data-label="Kurs">
+                  <span class="schedule-course-name">Yoga Flow</span><br /><span
+                    class="schedule-trainer"
+                    >Lisa K.</span
+                  >
+                </td>
+                <td data-label="Trainer">Lisa K.</td>
+                <td data-label="Kat.">
+                  <span class="schedule-badge badge-yoga">Yoga</span>
+                </td>
+                <td data-label="Dauer">60 Min</td>
+                <td data-label="Plätze">
+                  <span class="schedule-spots spots-available">6 frei</span>
+                </td>
+                <td><button class="schedule-book-btn">Buchen</button></td>
+              </tr>
+              <tr>
+                <td data-label="Zeit">17:00</td>
+                <td data-label="Kurs">
+                  <span class="schedule-course-name">Spin Cycle</span
+                  ><br /><span class="schedule-trainer">Nina W.</span>
+                </td>
+                <td data-label="Trainer">Nina W.</td>
+                <td data-label="Kat.">
+                  <span class="schedule-badge badge-cycling">Cycling</span>
+                </td>
+                <td data-label="Dauer">45 Min</td>
+                <td data-label="Plätze">
+                  <span class="schedule-spots spots-few">4 frei</span>
+                </td>
+                <td><button class="schedule-book-btn">Buchen</button></td>
+              </tr>
+              <tr>
+                <td data-label="Zeit">19:00</td>
+                <td data-label="Kurs">
+                  <span class="schedule-course-name">HIIT Storm</span
+                  ><br /><span class="schedule-trainer">Marco R.</span>
+                </td>
+                <td data-label="Trainer">Marco R.</td>
+                <td data-label="Kat.">
+                  <span class="schedule-badge badge-hiit">HIIT</span>
+                </td>
+                <td data-label="Dauer">30 Min</td>
+                <td data-label="Plätze">
+                  <span class="schedule-spots spots-available">8 frei</span>
+                </td>
+                <td><button class="schedule-book-btn">Buchen</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Donnerstag -->
+        <div
+          class="schedule-content"
+          data-tab-content="schedule"
+          data-tab-id="do">
+          <table class="schedule-table">
+            <thead>
+              <tr>
+                <th>Uhrzeit</th>
+                <th>Kurs</th>
+                <th>Trainer</th>
+                <th>Kategorie</th>
+                <th>Dauer</th>
+                <th>Plätze</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Zeit">06:30</td>
+                <td data-label="Kurs">
+                  <span class="schedule-course-name">Cardio Blast</span
+                  ><br /><span class="schedule-trainer">Sarah M.</span>
+                </td>
+                <td data-label="Trainer">Sarah M.</td>
+                <td data-label="Kat.">
+                  <span class="schedule-badge badge-cardio">Cardio</span>
+                </td>
+                <td data-label="Dauer">45 Min</td>
+                <td data-label="Plätze">
+                  <span class="schedule-spots spots-available">11 frei</span>
+                </td>
+                <td><button class="schedule-book-btn">Buchen</button></td>
+              </tr>
+              <tr>
+                <td data-label="Zeit">10:00</td>
+                <td data-label="Kurs">
+                  <span class="schedule-course-name">Power Lift</span
+                  ><br /><span class="schedule-trainer">Tom S.</span>
+                </td>
+                <td data-label="Trainer">Tom S.</td>
+                <td data-label="Kat.">
+                  <span class="schedule-badge badge-kraft">Kraft</span>
+                </td>
+                <td data-label="Dauer">60 Min</td>
+                <td data-label="Plätze">
+                  <span class="schedule-spots spots-few">1 frei</span>
+                </td>
+                <td><button class="schedule-book-btn">Buchen</button></td>
+              </tr>
+              <tr>
+                <td data-label="Zeit">18:30</td>
+                <td data-label="Kurs">
+                  <span class="schedule-course-name">Body Pump</span><br /><span
+                    class="schedule-trainer"
+                    >Marco R.</span
+                  >
+                </td>
+                <td data-label="Trainer">Marco R.</td>
+                <td data-label="Kat.">
+                  <span class="schedule-badge badge-kraft">Kraft</span>
+                </td>
+                <td data-label="Dauer">55 Min</td>
+                <td data-label="Plätze">
+                  <span class="schedule-spots spots-available">9 frei</span>
+                </td>
+                <td><button class="schedule-book-btn">Buchen</button></td>
+              </tr>
+              <tr>
+                <td data-label="Zeit">20:00</td>
+                <td data-label="Kurs">
+                  <span class="schedule-course-name">Yoga Flow</span><br /><span
+                    class="schedule-trainer"
+                    >Lisa K.</span
+                  >
+                </td>
+                <td data-label="Trainer">Lisa K.</td>
+                <td data-label="Kat.">
+                  <span class="schedule-badge badge-yoga">Yoga</span>
+                </td>
+                <td data-label="Dauer">60 Min</td>
+                <td data-label="Plätze">
+                  <span class="schedule-spots spots-available">7 frei</span>
+                </td>
+                <td><button class="schedule-book-btn">Buchen</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Freitag -->
+        <div
+          class="schedule-content"
+          data-tab-content="schedule"
+          data-tab-id="fr">
+          <table class="schedule-table">
+            <thead>
+              <tr>
+                <th>Uhrzeit</th>
+                <th>Kurs</th>
+                <th>Trainer</th>
+                <th>Kategorie</th>
+                <th>Dauer</th>
+                <th>Plätze</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Zeit">07:00</td>
+                <td data-label="Kurs">
+                  <span class="schedule-course-name">HIIT Storm</span
+                  ><br /><span class="schedule-trainer">Marco R.</span>
+                </td>
+                <td data-label="Trainer">Marco R.</td>
+                <td data-label="Kat.">
+                  <span class="schedule-badge badge-hiit">HIIT</span>
+                </td>
+                <td data-label="Dauer">30 Min</td>
+                <td data-label="Plätze">
+                  <span class="schedule-spots spots-available">10 frei</span>
+                </td>
+                <td><button class="schedule-book-btn">Buchen</button></td>
+              </tr>
+              <tr>
+                <td data-label="Zeit">09:30</td>
+                <td data-label="Kurs">
+                  <span class="schedule-course-name">Spin Cycle</span
+                  ><br /><span class="schedule-trainer">Nina W.</span>
+                </td>
+                <td data-label="Trainer">Nina W.</td>
+                <td data-label="Kat.">
+                  <span class="schedule-badge badge-cycling">Cycling</span>
+                </td>
+                <td data-label="Dauer">45 Min</td>
+                <td data-label="Plätze">
+                  <span class="schedule-spots spots-full">Ausgebucht</span>
+                </td>
+                <td>
+                  <button class="schedule-book-btn" disabled>Voll</button>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Zeit">17:30</td>
+                <td data-label="Kurs">
+                  <span class="schedule-course-name">Cardio Blast</span
+                  ><br /><span class="schedule-trainer">Sarah M.</span>
+                </td>
+                <td data-label="Trainer">Sarah M.</td>
+                <td data-label="Kat.">
+                  <span class="schedule-badge badge-cardio">Cardio</span>
+                </td>
+                <td data-label="Dauer">45 Min</td>
+                <td data-label="Plätze">
+                  <span class="schedule-spots spots-available">6 frei</span>
+                </td>
+                <td><button class="schedule-book-btn">Buchen</button></td>
+              </tr>
+              <tr>
+                <td data-label="Zeit">19:00</td>
+                <td data-label="Kurs">
+                  <span class="schedule-course-name">Power Lift</span
+                  ><br /><span class="schedule-trainer">Tom S.</span>
+                </td>
+                <td data-label="Trainer">Tom S.</td>
+                <td data-label="Kat.">
+                  <span class="schedule-badge badge-kraft">Kraft</span>
+                </td>
+                <td data-label="Dauer">60 Min</td>
+                <td data-label="Plätze">
+                  <span class="schedule-spots spots-few">2 frei</span>
+                </td>
+                <td><button class="schedule-book-btn">Buchen</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Samstag -->
+        <div
+          class="schedule-content"
+          data-tab-content="schedule"
+          data-tab-id="sa">
+          <table class="schedule-table">
+            <thead>
+              <tr>
+                <th>Uhrzeit</th>
+                <th>Kurs</th>
+                <th>Trainer</th>
+                <th>Kategorie</th>
+                <th>Dauer</th>
+                <th>Plätze</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Zeit">09:00</td>
+                <td data-label="Kurs">
+                  <span class="schedule-course-name">Body Pump</span><br /><span
+                    class="schedule-trainer"
+                    >Tom S.</span
+                  >
+                </td>
+                <td data-label="Trainer">Tom S.</td>
+                <td data-label="Kat.">
+                  <span class="schedule-badge badge-kraft">Kraft</span>
+                </td>
+                <td data-label="Dauer">55 Min</td>
+                <td data-label="Plätze">
+                  <span class="schedule-spots spots-available">15 frei</span>
+                </td>
+                <td><button class="schedule-book-btn">Buchen</button></td>
+              </tr>
+              <tr>
+                <td data-label="Zeit">10:30</td>
+                <td data-label="Kurs">
+                  <span class="schedule-course-name">Spin Cycle</span
+                  ><br /><span class="schedule-trainer">Nina W.</span>
+                </td>
+                <td data-label="Trainer">Nina W.</td>
+                <td data-label="Kat.">
+                  <span class="schedule-badge badge-cycling">Cycling</span>
+                </td>
+                <td data-label="Dauer">45 Min</td>
+                <td data-label="Plätze">
+                  <span class="schedule-spots spots-few">3 frei</span>
+                </td>
+                <td><button class="schedule-book-btn">Buchen</button></td>
+              </tr>
+              <tr>
+                <td data-label="Zeit">12:00</td>
+                <td data-label="Kurs">
+                  <span class="schedule-course-name">Yoga Flow</span><br /><span
+                    class="schedule-trainer"
+                    >Lisa K.</span
+                  >
+                </td>
+                <td data-label="Trainer">Lisa K.</td>
+                <td data-label="Kat.">
+                  <span class="schedule-badge badge-yoga">Yoga</span>
+                </td>
+                <td data-label="Dauer">60 Min</td>
+                <td data-label="Plätze">
+                  <span class="schedule-spots spots-available">10 frei</span>
+                </td>
+                <td><button class="schedule-book-btn">Buchen</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Sonntag -->
+        <div
+          class="schedule-content"
+          data-tab-content="schedule"
+          data-tab-id="so">
+          <table class="schedule-table">
+            <thead>
+              <tr>
+                <th>Uhrzeit</th>
+                <th>Kurs</th>
+                <th>Trainer</th>
+                <th>Kategorie</th>
+                <th>Dauer</th>
+                <th>Plätze</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Zeit">10:00</td>
+                <td data-label="Kurs">
+                  <span class="schedule-course-name">Yoga Flow</span><br /><span
+                    class="schedule-trainer"
+                    >Lisa K.</span
+                  >
+                </td>
+                <td data-label="Trainer">Lisa K.</td>
+                <td data-label="Kat.">
+                  <span class="schedule-badge badge-yoga">Yoga</span>
+                </td>
+                <td data-label="Dauer">60 Min</td>
+                <td data-label="Plätze">
+                  <span class="schedule-spots spots-available">12 frei</span>
+                </td>
+                <td><button class="schedule-book-btn">Buchen</button></td>
+              </tr>
+              <tr>
+                <td data-label="Zeit">11:30</td>
+                <td data-label="Kurs">
+                  <span class="schedule-course-name">Cardio Blast</span
+                  ><br /><span class="schedule-trainer">Sarah M.</span>
+                </td>
+                <td data-label="Trainer">Sarah M.</td>
+                <td data-label="Kat.">
+                  <span class="schedule-badge badge-cardio">Cardio</span>
+                </td>
+                <td data-label="Dauer">45 Min</td>
+                <td data-label="Plätze">
+                  <span class="schedule-spots spots-available">8 frei</span>
+                </td>
+                <td><button class="schedule-book-btn">Buchen</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA STRIP ─────────────────────────────────────────── -->
+    <section class="courses-cta">
+      <div class="container">
+        <h2>Alle Kurse.<br /><span>Ein Preis.</span></h2>
+        <p>
+          Mit der Pro oder Elite Mitgliedschaft sind alle Kurse ohne Aufpreis
+          buchbar.
+        </p>
+        <a href="membership.html" class="btn btn-primary">
+          <i class="fas fa-bolt"></i> Mitgliedschaft wählen
+        </a>
+      </div>
+    </section>
+
+    <!-- ── FOOTER ───────────────────────────────────────────── -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img src="assets/logo.svg" alt="FIT Training Center" />
+            <p>
+              Dein Premium Fitness Studio im Herzen der Stadt. Wir bringen dich
+              ans Limit — und darüber hinaus.
+            </p>
+            <div class="footer-social">
+              <a href="#" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+              <a href="#" aria-label="YouTube"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Navigation</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">Über uns</a></li>
+              <li><a href="courses.html">Kurse</a></li>
+              <li><a href="membership.html">Mitgliedschaft</a></li>
+              <li><a href="team.html">Team</a></li>
+              <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Öffnungszeiten</h4>
+            <ul>
+              <li><a>Mo – Fr: 06:00 – 23:00</a></li>
+              <li><a>Sa: 08:00 – 22:00</a></li>
+              <li><a>So: 09:00 – 20:00</a></li>
+              <li><a>Feiertage: 10:00 – 18:00</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Kontakt</h4>
+            <div class="footer-contact-item">
+              <i class="fas fa-location-dot icon"></i>
+              <span>Musterstraße 42<br />10115 Berlin</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-phone icon"></i>
+              <span>+49 30 123 456 78</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-envelope icon"></i>
+              <span>info@fit-trainingcenter.de</span>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 FIT Training Center. Alle Rechte vorbehalten.</p>
+          <div class="footer-bottom-links">
+            <a href="#">Impressum</a>
+            <a href="#">Datenschutz</a>
+            <a href="#">AGB</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

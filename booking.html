@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="FIT Training Center – Kurs buchen. Wähle deinen Kurs, Termin und Trainer." />
+    <title>FIT Training Center — Termin buchen</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Barlow+Condensed:wght@400;600;700&display=swap"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/basic.css" />
+    <link rel="stylesheet" href="css/booking.css" />
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <div class="progress-bar"></div>
+
+    <!-- ── NAVIGATION ──────────────────────────────────────── -->
+    <nav class="navbar">
+      <div class="container">
+        <a href="index.html" class="nav-logo">
+          <img src="assets/logo.svg" alt="FIT Training Center" />
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">Über uns</a></li>
+          <li><a href="courses.html">Kurse</a></li>
+          <li><a href="membership.html">Mitgliedschaft</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
+        </ul>
+        <a href="booking.html" class="nav-cta active">Termin buchen</a>
+        <button class="nav-hamburger" aria-label="Menü öffnen">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <nav class="nav-mobile">
+      <a href="index.html">Home</a>
+      <a href="about.html">Über uns</a>
+      <a href="courses.html">Kurse</a>
+      <a href="membership.html">Mitgliedschaft</a>
+      <a href="team.html">Team</a>
+      <a href="contact.html">Kontakt</a>
+      <a href="booking.html" class="nav-cta-mobile">Termin buchen</a>
+    </nav>
+
+    <!-- ── HERO ─────────────────────────────────────────────── -->
+    <section class="booking-hero">
+      <div class="booking-hero-bg">
+        <img
+          src="assets/studio-one.jpg"
+          alt="Termin buchen"
+          data-parallax="0.2" />
+      </div>
+      <div class="booking-hero-content">
+        <div class="container">
+          <div class="booking-hero-eyebrow"><span>Buchung</span></div>
+          <h1 class="booking-hero-title">Termin<br /><em>buchen.</em></h1>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PROGRESS BAR ──────────────────────────────────────── -->
+    <div class="booking-progress">
+      <div class="container">
+        <div class="booking-progress-inner">
+          <div class="progress-step active" id="progressStep1">
+            <div class="progress-step-num">1</div>
+            <div class="progress-step-text">
+              <span class="progress-step-label">Schritt 1</span>
+              <span class="progress-step-title">Kurs wählen</span>
+            </div>
+          </div>
+          <div class="progress-step" id="progressStep2">
+            <div class="progress-step-num">2</div>
+            <div class="progress-step-text">
+              <span class="progress-step-label">Schritt 2</span>
+              <span class="progress-step-title">Datum & Trainer</span>
+            </div>
+          </div>
+          <div class="progress-step" id="progressStep3">
+            <div class="progress-step-num">3</div>
+            <div class="progress-step-text">
+              <span class="progress-step-label">Schritt 3</span>
+              <span class="progress-step-title">Deine Daten</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── BOOKING MAIN ──────────────────────────────────────── -->
+    <section class="booking-main" id="bookingMain">
+      <div class="container">
+        <div class="booking-layout">
+          <!-- LEFT: Steps -->
+          <div class="booking-steps-wrap">
+            <!-- ── STEP 1: Kurs wählen ────────────────────────── -->
+            <div class="booking-step active" id="step1">
+              <h2 class="step-title">Wähle deinen <em>Kurs.</em></h2>
+              <p class="step-subtitle">
+                Klicke auf einen Kurs um ihn auszuwählen.
+              </p>
+
+              <div class="course-select-grid">
+                <div
+                  class="course-select-card"
+                  data-course="Cardio Blast"
+                  data-cat="Cardio"
+                  data-duration="45 Min"
+                  data-level="Alle Level">
+                  <div class="course-select-img">
+                    <img src="assets/cardio.jpg" alt="Cardio Blast" />
+                  </div>
+                  <div class="course-select-body">
+                    <span class="course-select-cat">Cardio</span>
+                    <h3 class="course-select-name">Cardio Blast</h3>
+                    <div class="course-select-meta">
+                      <span><i class="fas fa-clock"></i> 45 Min</span>
+                      <span><i class="fas fa-signal"></i> Alle Level</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="course-select-card"
+                  data-course="Power Lift"
+                  data-cat="Kraft"
+                  data-duration="60 Min"
+                  data-level="Fortgeschritten">
+                  <div class="course-select-img">
+                    <img src="assets/strength.jpg" alt="Power Lift" />
+                  </div>
+                  <div class="course-select-body">
+                    <span class="course-select-cat">Kraft</span>
+                    <h3 class="course-select-name">Power Lift</h3>
+                    <div class="course-select-meta">
+                      <span><i class="fas fa-clock"></i> 60 Min</span>
+                      <span><i class="fas fa-signal"></i> Fortgeschritten</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="course-select-card"
+                  data-course="Spin Cycle"
+                  data-cat="Cycling"
+                  data-duration="45 Min"
+                  data-level="Alle Level">
+                  <div class="course-select-img">
+                    <img src="assets/bikes.jpg" alt="Spin Cycle" />
+                  </div>
+                  <div class="course-select-body">
+                    <span class="course-select-cat">Cycling</span>
+                    <h3 class="course-select-name">Spin Cycle</h3>
+                    <div class="course-select-meta">
+                      <span><i class="fas fa-clock"></i> 45 Min</span>
+                      <span><i class="fas fa-signal"></i> Alle Level</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="course-select-card"
+                  data-course="HIIT Storm"
+                  data-cat="HIIT"
+                  data-duration="30 Min"
+                  data-level="Fortgeschritten">
+                  <div class="course-select-img">
+                    <img src="assets/workout.jpg" alt="HIIT Storm" />
+                  </div>
+                  <div class="course-select-body">
+                    <span class="course-select-cat">HIIT</span>
+                    <h3 class="course-select-name">HIIT Storm</h3>
+                    <div class="course-select-meta">
+                      <span><i class="fas fa-clock"></i> 30 Min</span>
+                      <span><i class="fas fa-signal"></i> Fortgeschritten</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="course-select-card"
+                  data-course="Yoga Flow"
+                  data-cat="Yoga & Mind"
+                  data-duration="60 Min"
+                  data-level="Alle Level">
+                  <div class="course-select-img">
+                    <img src="assets/studio-five.jpg" alt="Yoga Flow" />
+                  </div>
+                  <div class="course-select-body">
+                    <span class="course-select-cat">Yoga & Mind</span>
+                    <h3 class="course-select-name">Yoga Flow</h3>
+                    <div class="course-select-meta">
+                      <span><i class="fas fa-clock"></i> 60 Min</span>
+                      <span><i class="fas fa-signal"></i> Alle Level</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="course-select-card"
+                  data-course="Body Pump"
+                  data-cat="Kraft"
+                  data-duration="55 Min"
+                  data-level="Einsteiger">
+                  <div class="course-select-img">
+                    <img src="assets/barbels.jpg" alt="Body Pump" />
+                  </div>
+                  <div class="course-select-body">
+                    <span class="course-select-cat">Kraft</span>
+                    <h3 class="course-select-name">Body Pump</h3>
+                    <div class="course-select-meta">
+                      <span><i class="fas fa-clock"></i> 55 Min</span>
+                      <span><i class="fas fa-signal"></i> Einsteiger</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="step-nav">
+                <div></div>
+                <button class="btn-next" id="nextStep1" disabled>
+                  Weiter <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- ── STEP 2: Datum & Trainer ────────────────────── -->
+            <div class="booking-step" id="step2">
+              <h2 class="step-title">Datum & <em>Trainer.</em></h2>
+              <p class="step-subtitle">
+                Wähle deinen Wunschtermin und deinen Trainer.
+              </p>
+
+              <div class="step2-grid">
+                <!-- Calendar -->
+                <div>
+                  <div class="calendar-wrap">
+                    <h4>Datum wählen</h4>
+                    <div class="calendar">
+                      <div class="calendar-header">
+                        <button class="cal-nav" id="calPrev">
+                          <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <h5 id="calMonthLabel">April 2026</h5>
+                        <button class="cal-nav" id="calNext">
+                          <i class="fas fa-chevron-right"></i>
+                        </button>
+                      </div>
+                      <div class="calendar-grid">
+                        <div class="calendar-days-header">
+                          <span>Mo</span><span>Di</span><span>Mi</span>
+                          <span>Do</span><span>Fr</span><span>Sa</span
+                          ><span>So</span>
+                        </div>
+                        <div class="calendar-dates" id="calDates"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Time Slots -->
+                  <div class="timeslots-wrap" style="margin-top: 1.5rem">
+                    <h4>Uhrzeit wählen</h4>
+                    <div class="timeslots" id="timeslots">
+                      <div class="timeslot" data-time="06:30">06:30</div>
+                      <div class="timeslot" data-time="08:00">08:00</div>
+                      <div class="timeslot" data-time="09:30">09:30</div>
+                      <div class="timeslot" data-time="11:00">11:00</div>
+                      <div class="timeslot" data-time="12:00">12:00</div>
+                      <div class="timeslot full" data-time="17:30">17:30</div>
+                      <div class="timeslot" data-time="18:30">18:30</div>
+                      <div class="timeslot full" data-time="19:00">19:00</div>
+                      <div class="timeslot" data-time="19:30">19:30</div>
+                      <div class="timeslot" data-time="20:00">20:00</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Trainer -->
+                <div class="trainer-select-wrap">
+                  <h4>Trainer wählen</h4>
+                  <div class="trainer-options">
+                    <div
+                      class="trainer-option"
+                      data-trainer="Tom Schneider"
+                      data-role="Strength Coach">
+                      <div class="trainer-option-avatar">TS</div>
+                      <div class="trainer-option-info">
+                        <span class="trainer-option-name">Tom Schneider</span>
+                        <span class="trainer-option-role"
+                          >Head Coach · Strength</span
+                        >
+                      </div>
+                      <div class="trainer-option-check">
+                        <i class="fas fa-check"></i>
+                      </div>
+                    </div>
+
+                    <div
+                      class="trainer-option"
+                      data-trainer="Sarah Müller"
+                      data-role="Cardio Coach">
+                      <div class="trainer-option-avatar">SM</div>
+                      <div class="trainer-option-info">
+                        <span class="trainer-option-name">Sarah Müller</span>
+                        <span class="trainer-option-role"
+                          >Cardio & Group Fitness</span
+                        >
+                      </div>
+                      <div class="trainer-option-check">
+                        <i class="fas fa-check"></i>
+                      </div>
+                    </div>
+
+                    <div
+                      class="trainer-option"
+                      data-trainer="Marco Rossi"
+                      data-role="HIIT Coach">
+                      <div class="trainer-option-avatar">MR</div>
+                      <div class="trainer-option-info">
+                        <span class="trainer-option-name">Marco Rossi</span>
+                        <span class="trainer-option-role"
+                          >HIIT & Performance</span
+                        >
+                      </div>
+                      <div class="trainer-option-check">
+                        <i class="fas fa-check"></i>
+                      </div>
+                    </div>
+
+                    <div
+                      class="trainer-option"
+                      data-trainer="Nina Weber"
+                      data-role="Cycling Coach">
+                      <div class="trainer-option-avatar">NW</div>
+                      <div class="trainer-option-info">
+                        <span class="trainer-option-name">Nina Weber</span>
+                        <span class="trainer-option-role">Indoor Cycling</span>
+                      </div>
+                      <div class="trainer-option-check">
+                        <i class="fas fa-check"></i>
+                      </div>
+                    </div>
+
+                    <div
+                      class="trainer-option"
+                      data-trainer="Lisa Köhler"
+                      data-role="Yoga Coach">
+                      <div class="trainer-option-avatar">LK</div>
+                      <div class="trainer-option-info">
+                        <span class="trainer-option-name">Lisa Köhler</span>
+                        <span class="trainer-option-role">Yoga & Mobility</span>
+                      </div>
+                      <div class="trainer-option-check">
+                        <i class="fas fa-check"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="step-nav">
+                <button class="btn-back" id="backStep2">
+                  <i class="fas fa-arrow-left"></i> Zurück
+                </button>
+                <button class="btn-next" id="nextStep2" disabled>
+                  Weiter <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- ── STEP 3: Persönliche Daten ──────────────────── -->
+            <div class="booking-step" id="step3">
+              <h2 class="step-title">Deine <em>Daten.</em></h2>
+              <p class="step-subtitle">
+                Fast geschafft — trage deine Daten ein und bestätige die
+                Buchung.
+              </p>
+
+              <form class="booking-form" id="bookingForm" novalidate>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="bFirstName">Vorname *</label>
+                    <input
+                      type="text"
+                      id="bFirstName"
+                      placeholder="Max"
+                      required />
+                  </div>
+                  <div class="form-group">
+                    <label for="bLastName">Nachname *</label>
+                    <input
+                      type="text"
+                      id="bLastName"
+                      placeholder="Mustermann"
+                      required />
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="bEmail">E-Mail *</label>
+                    <input
+                      type="email"
+                      id="bEmail"
+                      placeholder="max@beispiel.de"
+                      required />
+                  </div>
+                  <div class="form-group">
+                    <label for="bPhone">Telefon</label>
+                    <input
+                      type="tel"
+                      id="bPhone"
+                      placeholder="+49 30 123 456" />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="bMembership">Mitgliedschaft</label>
+                  <select id="bMembership">
+                    <option value="">Ich bin noch kein Mitglied</option>
+                    <option value="basic">Basic Mitglied</option>
+                    <option value="pro">Pro Mitglied</option>
+                    <option value="elite">Elite Mitglied</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="bNotes">Anmerkungen</label>
+                  <input
+                    type="text"
+                    id="bNotes"
+                    placeholder="Verletzungen, besondere Wünsche..." />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-checkbox">
+                    <input type="checkbox" id="bPrivacy" required />
+                    <span
+                      >Ich habe die <a href="#">Datenschutzerklärung</a> gelesen
+                      und stimme zu. *</span
+                    >
+                  </label>
+                </div>
+              </form>
+
+              <div class="step-nav">
+                <button class="btn-back" id="backStep3">
+                  <i class="fas fa-arrow-left"></i> Zurück
+                </button>
+                <button class="btn-next" id="submitBooking">
+                  <i class="fas fa-bolt"></i> Buchung bestätigen
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT: Summary Sidebar -->
+          <div class="booking-sidebar">
+            <div class="booking-summary">
+              <div class="summary-header">
+                <i class="fas fa-clipboard-list"></i>
+                <h4>Buchungsübersicht</h4>
+              </div>
+              <div class="summary-body">
+                <div class="summary-item">
+                  <span class="summary-item-label">Kurs</span>
+                  <span class="summary-item-value empty" id="summCourse"
+                    >Noch nicht gewählt</span
+                  >
+                </div>
+                <div class="summary-divider"></div>
+                <div class="summary-item">
+                  <span class="summary-item-label">Datum</span>
+                  <span class="summary-item-value empty" id="summDate"
+                    >Noch nicht gewählt</span
+                  >
+                </div>
+                <div class="summary-item">
+                  <span class="summary-item-label">Uhrzeit</span>
+                  <span class="summary-item-value empty" id="summTime"
+                    >Noch nicht gewählt</span
+                  >
+                </div>
+                <div class="summary-divider"></div>
+                <div class="summary-item">
+                  <span class="summary-item-label">Trainer</span>
+                  <span class="summary-item-value empty" id="summTrainer"
+                    >Noch nicht gewählt</span
+                  >
+                </div>
+              </div>
+              <div class="summary-note">
+                <i class="fas fa-info-circle"></i>
+                <p>
+                  Eine Buchungsbestätigung wird dir per E-Mail zugesendet.
+                  Kostenloses Stornieren bis 24h vorher.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── CONFIRMATION ──────────────────────────────────── -->
+        <div class="booking-confirmation" id="bookingConfirmation">
+          <div class="confirmation-icon">
+            <i class="fas fa-check"></i>
+          </div>
+          <h2 class="confirmation-title">Buchung<br /><em>bestätigt!</em></h2>
+          <p class="confirmation-text">
+            Wir freuen uns auf dich! Eine Bestätigung wurde an deine
+            E-Mail-Adresse gesendet. Denke daran, 10 Minuten vor Kursbeginn da
+            zu sein.
+          </p>
+          <div class="confirmation-details" id="confirmDetails"></div>
+          <div class="confirmation-btns">
+            <a href="courses.html" class="btn btn-outline">
+              <i class="fas fa-calendar"></i> Weitere Kurse
+            </a>
+            <a href="index.html" class="btn btn-primary">
+              <i class="fas fa-house"></i> Zur Startseite
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FOOTER ───────────────────────────────────────────── -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img src="assets/logo.svg" alt="FIT Training Center" />
+            <p>
+              Dein Premium Fitness Studio im Herzen der Stadt. Wir bringen dich
+              ans Limit — und darüber hinaus.
+            </p>
+            <div class="footer-social">
+              <a href="#" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+              <a href="#" aria-label="YouTube"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Navigation</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">Über uns</a></li>
+              <li><a href="courses.html">Kurse</a></li>
+              <li><a href="membership.html">Mitgliedschaft</a></li>
+              <li><a href="team.html">Team</a></li>
+              <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Öffnungszeiten</h4>
+            <ul>
+              <li><a>Mo – Fr: 06:00 – 23:00</a></li>
+              <li><a>Sa: 08:00 – 22:00</a></li>
+              <li><a>So: 09:00 – 20:00</a></li>
+              <li><a>Feiertage: 10:00 – 18:00</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Kontakt</h4>
+            <div class="footer-contact-item">
+              <i class="fas fa-location-dot icon"></i>
+              <span>Musterstraße 42<br />10115 Berlin</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-phone icon"></i>
+              <span>+49 30 123 456 78</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-envelope icon"></i>
+              <span>info@fit-trainingcenter.de</span>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 FIT Training Center. Alle Rechte vorbehalten.</p>
+          <div class="footer-bottom-links">
+            <a href="#">Impressum</a>
+            <a href="#">Datenschutz</a>
+            <a href="#">AGB</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

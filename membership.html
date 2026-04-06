@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="FIT Training Center – Mitgliedschaft & Preise. Basic, Pro und Elite." />
+    <title>FIT Training Center — Mitgliedschaft & Preise</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Barlow+Condensed:wght@400;600;700&display=swap"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/basic.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/membership.css" />
+  </head>
+  <body>
+    <div class="progress-bar"></div>
+
+    <!-- ── NAVIGATION ──────────────────────────────────────── -->
+    <nav class="navbar">
+      <div class="container">
+        <a href="index.html" class="nav-logo">
+          <img src="assets/logo.svg" alt="FIT Training Center" />
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">Über uns</a></li>
+          <li><a href="courses.html">Kurse</a></li>
+          <li><a href="membership.html" class="active">Mitgliedschaft</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
+        </ul>
+        <a href="membership.html" class="nav-cta">Jetzt starten</a>
+        <button class="nav-hamburger" aria-label="Menü öffnen">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <nav class="nav-mobile">
+      <a href="index.html">Home</a>
+      <a href="about.html">Über uns</a>
+      <a href="courses.html">Kurse</a>
+      <a href="membership.html">Mitgliedschaft</a>
+      <a href="team.html">Team</a>
+      <a href="contact.html">Kontakt</a>
+      <a href="membership.html" class="nav-cta-mobile">Jetzt starten</a>
+    </nav>
+
+    <!-- ── PAGE HERO ────────────────────────────────────────── -->
+    <section class="page-hero">
+      <div class="page-hero-bg">
+        <img
+          src="assets/barbels.jpg"
+          alt="Mitgliedschaft"
+          data-parallax="0.3" />
+      </div>
+      <div class="page-hero-content">
+        <div class="container">
+          <div class="page-hero-eyebrow"><span>Deine Mitgliedschaft</span></div>
+          <h1 class="page-hero-title">Wähle<br />deinen <em>Plan.</em></h1>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── BILLING TOGGLE ───────────────────────────────────── -->
+    <div class="billing-toggle">
+      <div class="billing-toggle-inner">
+        <span class="billing-label active" id="labelMonthly">Monatlich</span>
+        <label class="toggle-switch">
+          <input type="checkbox" id="billingToggle" />
+          <div class="toggle-track"></div>
+          <div class="toggle-thumb"></div>
+        </label>
+        <span class="billing-label" id="labelAnnual">
+          Jährlich <span class="billing-save-badge">–20%</span>
+        </span>
+      </div>
+    </div>
+
+    <!-- ── PRICING CARDS ─────────────────────────────────────── -->
+    <section class="pricing-section">
+      <div class="container">
+        <div class="pricing-grid">
+          <!-- Basic -->
+          <div class="pricing-card reveal">
+            <div style="height: 1.8rem"></div>
+            <h2 class="pricing-name">Basic</h2>
+            <p class="pricing-desc">
+              Der perfekte Einstieg — alles was du für ein solides Training
+              brauchst.
+            </p>
+            <div class="pricing-price">
+              <span class="pricing-currency">€</span>
+              <span class="pricing-amount" data-monthly="29" data-annual="23"
+                >29</span
+              >
+              <span class="pricing-period">/ Monat</span>
+            </div>
+            <p class="pricing-annual-note" id="noteBasic">&nbsp;</p>
+            <div class="pricing-divider"></div>
+            <ul class="pricing-features">
+              <li class="pricing-feature included">
+                <i class="fas fa-check"></i> Freier Gerätezugang
+              </li>
+              <li class="pricing-feature included">
+                <i class="fas fa-check"></i> Umkleiden & Duschen
+              </li>
+              <li class="pricing-feature included">
+                <i class="fas fa-check"></i> 2 Gruppenkurse / Monat
+              </li>
+              <li class="pricing-feature included">
+                <i class="fas fa-check"></i> Fitness-App Zugang
+              </li>
+              <li class="pricing-feature excluded">
+                <i class="fas fa-times"></i> Unlimited Kurse
+              </li>
+              <li class="pricing-feature excluded">
+                <i class="fas fa-times"></i> Wellness Zone
+              </li>
+              <li class="pricing-feature excluded">
+                <i class="fas fa-times"></i> Personal Training
+              </li>
+              <li class="pricing-feature excluded">
+                <i class="fas fa-times"></i> Ernährungsberatung
+              </li>
+            </ul>
+            <a href="contact.html" class="pricing-btn">Jetzt starten</a>
+          </div>
+
+          <!-- Pro -->
+          <div class="pricing-card featured reveal">
+            <div class="pricing-popular">
+              <i class="fas fa-star"></i> Beliebteste Wahl
+            </div>
+            <h2 class="pricing-name">Pro</h2>
+            <p class="pricing-desc">
+              Maximale Flexibilität — alle Kurse, alle Features, keine
+              Kompromisse.
+            </p>
+            <div class="pricing-price">
+              <span class="pricing-currency">€</span>
+              <span class="pricing-amount" data-monthly="59" data-annual="47"
+                >59</span
+              >
+              <span class="pricing-period">/ Monat</span>
+            </div>
+            <p class="pricing-annual-note" id="notePro">&nbsp;</p>
+            <div class="pricing-divider"></div>
+            <ul class="pricing-features">
+              <li class="pricing-feature included">
+                <i class="fas fa-check"></i> Freier Gerätezugang
+              </li>
+              <li class="pricing-feature included">
+                <i class="fas fa-check"></i> Umkleiden & Duschen
+              </li>
+              <li class="pricing-feature included">
+                <i class="fas fa-check"></i> Unlimited Gruppenkurse
+              </li>
+              <li class="pricing-feature included">
+                <i class="fas fa-check"></i> Fitness-App Zugang
+              </li>
+              <li class="pricing-feature included">
+                <i class="fas fa-check"></i> Wellness Zone (Sauna, Dampfbad)
+              </li>
+              <li class="pricing-feature included">
+                <i class="fas fa-check"></i> 1 Personal Training / Monat
+              </li>
+              <li class="pricing-feature excluded">
+                <i class="fas fa-times"></i> Unlimited Personal Training
+              </li>
+              <li class="pricing-feature excluded">
+                <i class="fas fa-times"></i> Ernährungsberatung
+              </li>
+            </ul>
+            <a href="contact.html" class="pricing-btn btn-accent"
+              >Jetzt starten</a
+            >
+          </div>
+
+          <!-- Elite -->
+          <div class="pricing-card reveal">
+            <div style="height: 1.8rem"></div>
+            <h2 class="pricing-name">Elite</h2>
+            <p class="pricing-desc">
+              Das komplette Premium-Erlebnis — für alle, die keine Kompromisse
+              machen.
+            </p>
+            <div class="pricing-price">
+              <span class="pricing-currency">€</span>
+              <span class="pricing-amount" data-monthly="99" data-annual="79"
+                >99</span
+              >
+              <span class="pricing-period">/ Monat</span>
+            </div>
+            <p class="pricing-annual-note" id="noteElite">&nbsp;</p>
+            <div class="pricing-divider"></div>
+            <ul class="pricing-features">
+              <li class="pricing-feature included">
+                <i class="fas fa-check"></i> Alles aus Pro
+              </li>
+              <li class="pricing-feature included">
+                <i class="fas fa-check"></i> Unlimited Personal Training
+              </li>
+              <li class="pricing-feature included">
+                <i class="fas fa-check"></i> Ernährungsberatung
+              </li>
+              <li class="pricing-feature included">
+                <i class="fas fa-check"></i> Priority Booking (alle Kurse)
+              </li>
+              <li class="pricing-feature included">
+                <i class="fas fa-check"></i> Monatliche Körperanalyse
+              </li>
+              <li class="pricing-feature included">
+                <i class="fas fa-check"></i> Individueller Trainingsplan
+              </li>
+              <li class="pricing-feature included">
+                <i class="fas fa-check"></i> Gäste-Tag (1x / Monat)
+              </li>
+              <li class="pricing-feature included">
+                <i class="fas fa-check"></i> VIP Lounge Zugang
+              </li>
+            </ul>
+            <a href="contact.html" class="pricing-btn">Jetzt starten</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── COMPARISON TABLE ──────────────────────────────────── -->
+    <section class="comparison-section">
+      <div class="container">
+        <div class="comparison-header reveal">
+          <span class="section-label">Vergleich</span>
+          <h2 class="section-title">Was ist enthalten?</h2>
+        </div>
+
+        <div class="comparison-table-wrap reveal">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>
+                  <span class="th-name">Basic</span
+                  ><span class="th-price">ab € 23 / Mo</span>
+                </th>
+                <th class="featured-col">
+                  <span class="th-name">Pro</span
+                  ><span class="th-price">ab € 47 / Mo</span>
+                </th>
+                <th>
+                  <span class="th-name">Elite</span
+                  ><span class="th-price">ab € 79 / Mo</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="category-row">
+                <td colspan="4">Grundausstattung</td>
+              </tr>
+              <tr>
+                <td>Gerätezugang</td>
+                <td><i class="fas fa-check check-yes"></i></td>
+                <td class="featured-col">
+                  <i class="fas fa-check check-yes"></i>
+                </td>
+                <td><i class="fas fa-check check-yes"></i></td>
+              </tr>
+              <tr>
+                <td>Umkleiden & Duschen</td>
+                <td><i class="fas fa-check check-yes"></i></td>
+                <td class="featured-col">
+                  <i class="fas fa-check check-yes"></i>
+                </td>
+                <td><i class="fas fa-check check-yes"></i></td>
+              </tr>
+              <tr>
+                <td>Fitness-App</td>
+                <td><i class="fas fa-check check-yes"></i></td>
+                <td class="featured-col">
+                  <i class="fas fa-check check-yes"></i>
+                </td>
+                <td><i class="fas fa-check check-yes"></i></td>
+              </tr>
+
+              <tr class="category-row">
+                <td colspan="4">Kurse</td>
+              </tr>
+              <tr>
+                <td>Gruppenkurse</td>
+                <td style="font-size: 0.8rem; color: var(--clr-text-muted)">
+                  2 / Monat
+                </td>
+                <td class="featured-col">
+                  <i
+                    class="fas fa-infinity check-yes"
+                    style="font-size: 0.85rem"></i>
+                </td>
+                <td>
+                  <i
+                    class="fas fa-infinity check-yes"
+                    style="font-size: 0.85rem"></i>
+                </td>
+              </tr>
+              <tr>
+                <td>Priority Booking</td>
+                <td><i class="fas fa-times check-no"></i></td>
+                <td class="featured-col">
+                  <i class="fas fa-times check-no"></i>
+                </td>
+                <td><i class="fas fa-check check-yes"></i></td>
+              </tr>
+
+              <tr class="category-row">
+                <td colspan="4">Wellness & Training</td>
+              </tr>
+              <tr>
+                <td>Wellness Zone</td>
+                <td><i class="fas fa-times check-no"></i></td>
+                <td class="featured-col">
+                  <i class="fas fa-check check-yes"></i>
+                </td>
+                <td><i class="fas fa-check check-yes"></i></td>
+              </tr>
+              <tr>
+                <td>Personal Training</td>
+                <td><i class="fas fa-times check-no"></i></td>
+                <td
+                  class="featured-col"
+                  style="font-size: 0.8rem; color: var(--clr-accent)">
+                  1 / Monat
+                </td>
+                <td>
+                  <i
+                    class="fas fa-infinity check-yes"
+                    style="font-size: 0.85rem"></i>
+                </td>
+              </tr>
+              <tr>
+                <td>Ernährungsberatung</td>
+                <td><i class="fas fa-times check-no"></i></td>
+                <td class="featured-col">
+                  <i class="fas fa-times check-no"></i>
+                </td>
+                <td><i class="fas fa-check check-yes"></i></td>
+              </tr>
+              <tr>
+                <td>Körperanalyse</td>
+                <td><i class="fas fa-times check-no"></i></td>
+                <td class="featured-col">
+                  <i class="fas fa-times check-no"></i>
+                </td>
+                <td><i class="fas fa-check check-yes"></i></td>
+              </tr>
+              <tr>
+                <td>Individueller Trainingsplan</td>
+                <td><i class="fas fa-times check-no"></i></td>
+                <td class="featured-col">
+                  <i class="fas fa-times check-no"></i>
+                </td>
+                <td><i class="fas fa-check check-yes"></i></td>
+              </tr>
+
+              <tr class="category-row">
+                <td colspan="4">Extras</td>
+              </tr>
+              <tr>
+                <td>Gäste-Tag</td>
+                <td><i class="fas fa-times check-no"></i></td>
+                <td class="featured-col">
+                  <i class="fas fa-times check-no"></i>
+                </td>
+                <td><i class="fas fa-check check-yes"></i></td>
+              </tr>
+              <tr>
+                <td>VIP Lounge</td>
+                <td><i class="fas fa-times check-no"></i></td>
+                <td class="featured-col">
+                  <i class="fas fa-times check-no"></i>
+                </td>
+                <td><i class="fas fa-check check-yes"></i></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FAQ ───────────────────────────────────────────────── -->
+    <section class="faq-section">
+      <div class="container">
+        <div class="faq-left reveal-left">
+          <span class="section-label">FAQ</span>
+          <h2 class="section-title" style="font-size: clamp(2rem, 4vw, 3.5rem)">
+            Häufige<br />Fragen.
+          </h2>
+          <p>
+            Du hast weitere Fragen? Unser Team hilft dir gerne persönlich
+            weiter.
+          </p>
+          <a href="contact.html" class="btn btn-outline">Kontakt aufnehmen</a>
+        </div>
+
+        <div class="faq-list reveal-right">
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="faq-question-text"
+                >Wie lange ist die Mindestlaufzeit?</span
+              >
+              <div class="faq-icon"><i class="fas fa-plus"></i></div>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Unsere Mitgliedschaften haben eine Mindestlaufzeit von einem
+                Monat (monatlich kündbar). Bei jährlicher Zahlung profitierst du
+                von 20% Rabatt.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="faq-question-text"
+                >Kann ich meinen Plan wechseln?</span
+              >
+              <div class="faq-icon"><i class="fas fa-plus"></i></div>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Ja, du kannst deinen Plan jederzeit zum nächsten Monatsbeginn
+                upgraden oder downgraden. Ein Downgrade ist zum Monatsende
+                möglich.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="faq-question-text">Gibt es eine Probestunde?</span>
+              <div class="faq-icon"><i class="fas fa-plus"></i></div>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Ja! Wir bieten jedem Interessenten eine kostenlose Probestunde
+                an. Melde dich einfach über unser Kontaktformular an.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="faq-question-text"
+                >Wie funktioniert die Kursbuchung?</span
+              >
+              <div class="faq-icon"><i class="fas fa-plus"></i></div>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Kurse können einfach über unsere Fitness-App oder direkt an der
+                Rezeption gebucht werden. Elite-Mitglieder haben Priority
+                Booking und können bis zu 7 Tage im Voraus buchen.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="faq-question-text"
+                >Was ist in der Wellness Zone enthalten?</span
+              >
+              <div class="faq-icon"><i class="fas fa-plus"></i></div>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Die Wellness Zone umfasst eine finnische Sauna, ein Dampfbad,
+                einen Ruhebereich mit Liegen sowie Zugang zu unserem
+                Recovery-Pool. Verfügbar für Pro & Elite Mitglieder.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span class="faq-question-text"
+                >Gibt es Rabatte für Studenten oder Familien?</span
+              >
+              <div class="faq-icon"><i class="fas fa-plus"></i></div>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Ja! Wir bieten 15% Studentenrabatt (mit gültigem
+                Studentenausweis) sowie spezielle Familientarife. Sprich uns
+                gerne an der Rezeption an.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── GUARANTEE STRIP ───────────────────────────────────── -->
+    <section class="guarantee-strip">
+      <div class="container">
+        <div class="guarantee-grid">
+          <div class="guarantee-item reveal">
+            <i class="fas fa-shield-halved guarantee-icon"></i>
+            <h4 class="guarantee-title">Keine Bindung</h4>
+            <p class="guarantee-text">
+              Monatlich kündbar, keine versteckten Kosten.
+            </p>
+          </div>
+          <div class="guarantee-item reveal">
+            <i class="fas fa-rotate-left guarantee-icon"></i>
+            <h4 class="guarantee-title">30 Tage Garantie</h4>
+            <p class="guarantee-text">
+              Nicht zufrieden? Geld zurück, kein Wenn und Aber.
+            </p>
+          </div>
+          <div class="guarantee-item reveal">
+            <i class="fas fa-lock guarantee-icon"></i>
+            <h4 class="guarantee-title">Sichere Zahlung</h4>
+            <p class="guarantee-text">
+              SEPA-Lastschrift, Kreditkarte oder PayPal.
+            </p>
+          </div>
+          <div class="guarantee-item reveal">
+            <i class="fas fa-headset guarantee-icon"></i>
+            <h4 class="guarantee-title">Support</h4>
+            <p class="guarantee-text">
+              Persönliche Beratung vor Ort oder telefonisch.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FOOTER ───────────────────────────────────────────── -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img src="assets/logo.svg" alt="FIT Training Center" />
+            <p>
+              Dein Premium Fitness Studio im Herzen der Stadt. Wir bringen dich
+              ans Limit — und darüber hinaus.
+            </p>
+            <div class="footer-social">
+              <a href="#" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+              <a href="#" aria-label="YouTube"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Navigation</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">Über uns</a></li>
+              <li><a href="courses.html">Kurse</a></li>
+              <li><a href="membership.html">Mitgliedschaft</a></li>
+              <li><a href="team.html">Team</a></li>
+              <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Öffnungszeiten</h4>
+            <ul>
+              <li><a>Mo – Fr: 06:00 – 23:00</a></li>
+              <li><a>Sa: 08:00 – 22:00</a></li>
+              <li><a>So: 09:00 – 20:00</a></li>
+              <li><a>Feiertage: 10:00 – 18:00</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Kontakt</h4>
+            <div class="footer-contact-item">
+              <i class="fas fa-location-dot icon"></i>
+              <span>Musterstraße 42<br />10115 Berlin</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-phone icon"></i>
+              <span>+49 30 123 456 78</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-envelope icon"></i>
+              <span>info@fit-trainingcenter.de</span>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 FIT Training Center. Alle Rechte vorbehalten.</p>
+          <div class="footer-bottom-links">
+            <a href="#">Impressum</a>
+            <a href="#">Datenschutz</a>
+            <a href="#">AGB</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

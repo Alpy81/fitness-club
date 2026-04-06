@@ -1,0 +1,1113 @@
+/* ============================================================
+   FIT TRAINING CENTER — booking.css
+   Terminbuchung — 3-stufiger Buchungsflow
+   ============================================================ */
+
+/* ── PAGE HERO ────────────────────────────────────────────── */
+.booking-hero {
+  position: relative;
+  height: 45vh;
+  min-height: 320px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.booking-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.booking-hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+}
+
+.booking-hero-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+      to top,
+      rgba(10, 10, 10, 1) 0%,
+      rgba(10, 10, 10, 0.5) 60%,
+      rgba(10, 10, 10, 0.2) 100%
+    ),
+    linear-gradient(to right, rgba(10, 10, 10, 0.7) 0%, transparent 70%);
+}
+
+.booking-hero-content {
+  position: relative;
+  z-index: 1;
+  padding-bottom: clamp(2.5rem, 5vh, 4rem);
+  width: 100%;
+}
+
+.booking-hero-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.booking-hero-eyebrow::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: var(--clr-accent);
+}
+
+.booking-hero-eyebrow span {
+  font-family: var(--font-condensed);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--clr-accent);
+}
+
+.booking-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 7vw, 7rem);
+  line-height: 0.92;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.booking-hero-title em {
+  font-style: normal;
+  color: var(--clr-accent);
+}
+
+/* ── PROGRESS STEPS ───────────────────────────────────────── */
+.booking-progress {
+  background: var(--clr-bg-card);
+  border-bottom: 1px solid var(--clr-border);
+  padding: 0;
+  position: sticky;
+  top: var(--nav-height);
+  z-index: 100;
+}
+
+.booking-progress-inner {
+  display: flex;
+  align-items: stretch;
+}
+
+.progress-step {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 2rem;
+  border-right: 1px solid var(--clr-border);
+  transition: var(--transition);
+  cursor: default;
+  position: relative;
+}
+
+.progress-step:last-child {
+  border-right: none;
+}
+
+.progress-step-num {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--clr-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-condensed);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--clr-text-muted);
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+
+.progress-step-text {
+}
+
+.progress-step-label {
+  font-family: var(--font-condensed);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--clr-text-muted);
+  display: block;
+  transition: var(--transition);
+}
+
+.progress-step-title {
+  font-family: var(--font-condensed);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--clr-text-muted);
+  display: block;
+  transition: var(--transition);
+}
+
+/* Active Step */
+.progress-step.active .progress-step-num {
+  background: var(--clr-accent);
+  border-color: var(--clr-accent);
+  color: var(--clr-bg);
+}
+
+.progress-step.active .progress-step-label {
+  color: var(--clr-accent);
+}
+
+.progress-step.active .progress-step-title {
+  color: var(--clr-white);
+}
+
+/* Completed Step */
+.progress-step.completed .progress-step-num {
+  background: rgba(174, 254, 2, 0.15);
+  border-color: var(--clr-accent);
+  color: var(--clr-accent);
+}
+
+.progress-step.completed .progress-step-title {
+  color: var(--clr-text-muted);
+}
+
+/* ── BOOKING MAIN ─────────────────────────────────────────── */
+.booking-main {
+  padding: clamp(3rem, 6vh, 5rem) 0 clamp(5rem, 10vh, 8rem);
+}
+
+.booking-layout {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 3rem;
+  align-items: start;
+}
+
+/* ── STEP PANELS ──────────────────────────────────────────── */
+.booking-step {
+  display: none;
+}
+
+.booking-step.active {
+  display: block;
+}
+
+.step-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.step-title em {
+  font-style: normal;
+  color: var(--clr-accent);
+}
+
+.step-subtitle {
+  font-size: 0.88rem;
+  color: var(--clr-text-muted);
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+/* ── STEP 1: Kursauswahl ──────────────────────────────────── */
+.course-select-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.course-select-card {
+  background: var(--clr-bg-card);
+  border: 1px solid var(--clr-border);
+  border-radius: 2px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: var(--transition);
+  position: relative;
+}
+
+.course-select-card:hover {
+  border-color: rgba(174, 254, 2, 0.3);
+  transform: translateY(-2px);
+}
+
+.course-select-card.selected {
+  border-color: var(--clr-accent);
+  background: rgba(174, 254, 2, 0.04);
+}
+
+.course-select-card.selected::after {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 26px;
+  height: 26px;
+  background: var(--clr-accent);
+  color: var(--clr-bg);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  line-height: 26px;
+  text-align: center;
+}
+
+.course-select-img {
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.course-select-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  filter: brightness(0.7);
+}
+
+.course-select-card:hover .course-select-img img,
+.course-select-card.selected .course-select-img img {
+  transform: scale(1.04);
+  filter: brightness(0.55);
+}
+
+.course-select-body {
+  padding: 1.25rem;
+}
+
+.course-select-cat {
+  font-family: var(--font-condensed);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--clr-accent);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.course-select-name {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.course-select-meta {
+  display: flex;
+  gap: 1rem;
+}
+
+.course-select-meta span {
+  font-family: var(--font-condensed);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--clr-text-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.course-select-meta span i {
+  color: var(--clr-accent);
+  font-size: 0.65rem;
+}
+
+/* ── STEP 2: Datum & Trainer ──────────────────────────────── */
+.step2-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+/* Calendar */
+.calendar-wrap h4 {
+  font-family: var(--font-condensed);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--clr-accent);
+  margin-bottom: 1rem;
+}
+
+.calendar {
+  background: var(--clr-bg-card);
+  border: 1px solid var(--clr-border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--clr-border);
+}
+
+.calendar-header h5 {
+  font-family: var(--font-condensed);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.cal-nav {
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--clr-border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  color: var(--clr-text-muted);
+  cursor: pointer;
+  transition: var(--transition);
+  background: transparent;
+}
+
+.cal-nav:hover {
+  border-color: var(--clr-accent);
+  color: var(--clr-accent);
+}
+
+.calendar-grid {
+  padding: 1rem;
+}
+
+.calendar-days-header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-bottom: 0.5rem;
+}
+
+.calendar-days-header span {
+  font-family: var(--font-condensed);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--clr-text-muted);
+  text-align: center;
+  padding: 0.25rem 0;
+}
+
+.calendar-dates {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+}
+
+.cal-day {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-condensed);
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: var(--transition);
+  color: var(--clr-text-muted);
+  background: transparent;
+  border: 1px solid transparent;
+}
+
+.cal-day:hover:not(.disabled):not(.empty) {
+  background: rgba(174, 254, 2, 0.08);
+  border-color: rgba(174, 254, 2, 0.3);
+  color: var(--clr-white);
+}
+
+.cal-day.available {
+  color: var(--clr-white);
+}
+
+.cal-day.today {
+  border-color: var(--clr-accent);
+  color: var(--clr-accent);
+}
+
+.cal-day.selected {
+  background: var(--clr-accent);
+  color: var(--clr-bg);
+  border-color: var(--clr-accent);
+}
+
+.cal-day.disabled {
+  opacity: 0.25;
+  cursor: not-allowed;
+}
+
+.cal-day.empty {
+  cursor: default;
+}
+
+/* Time Slots */
+.timeslots-wrap h4 {
+  font-family: var(--font-condensed);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--clr-accent);
+  margin-bottom: 1rem;
+}
+
+.timeslots {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.timeslot {
+  padding: 0.75rem 0.5rem;
+  font-family: var(--font-condensed);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-align: center;
+  background: var(--clr-bg-card);
+  border: 1px solid var(--clr-border);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: var(--transition);
+  color: var(--clr-text-muted);
+}
+
+.timeslot:hover:not(.full) {
+  border-color: rgba(174, 254, 2, 0.3);
+  color: var(--clr-white);
+}
+
+.timeslot.selected {
+  background: var(--clr-accent);
+  border-color: var(--clr-accent);
+  color: var(--clr-bg);
+}
+
+.timeslot.full {
+  opacity: 0.3;
+  cursor: not-allowed;
+  text-decoration: line-through;
+}
+
+/* Trainer Select */
+.trainer-select-wrap h4 {
+  font-family: var(--font-condensed);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--clr-accent);
+  margin-bottom: 1rem;
+}
+
+.trainer-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.trainer-option {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.9rem 1.25rem;
+  background: var(--clr-bg-card);
+  border: 1px solid var(--clr-border);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.trainer-option:hover {
+  border-color: rgba(174, 254, 2, 0.3);
+}
+
+.trainer-option.selected {
+  border-color: var(--clr-accent);
+  background: rgba(174, 254, 2, 0.04);
+}
+
+.trainer-option-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--clr-border);
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--clr-accent);
+}
+
+.trainer-option-info {
+}
+
+.trainer-option-name {
+  font-family: var(--font-condensed);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--clr-white);
+  display: block;
+}
+
+.trainer-option-role {
+  font-size: 0.75rem;
+  color: var(--clr-text-muted);
+  display: block;
+}
+
+.trainer-option-check {
+  margin-left: auto;
+  width: 22px;
+  height: 22px;
+  border: 1px solid var(--clr-border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  color: transparent;
+  transition: var(--transition);
+  flex-shrink: 0;
+}
+
+.trainer-option.selected .trainer-option-check {
+  background: var(--clr-accent);
+  border-color: var(--clr-accent);
+  color: var(--clr-bg);
+}
+
+/* ── STEP 3: Persönliche Daten ────────────────────────────── */
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-family: var(--font-condensed);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--clr-text-muted);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.9rem 1.25rem;
+  background: var(--clr-bg-card);
+  border: 1px solid var(--clr-border);
+  border-radius: 2px;
+  color: var(--clr-white);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 300;
+  transition: var(--transition);
+  outline: none;
+  appearance: none;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--clr-accent);
+  background: rgba(174, 254, 2, 0.03);
+  box-shadow: 0 0 0 3px rgba(174, 254, 2, 0.08);
+}
+
+.form-group select option {
+  background: var(--clr-bg-card);
+  color: var(--clr-white);
+}
+
+.form-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  cursor: pointer;
+}
+
+.form-checkbox input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  padding: 0;
+  accent-color: var(--clr-accent);
+  margin-top: 2px;
+}
+
+.form-checkbox span {
+  font-size: 0.82rem;
+  color: var(--clr-text-muted);
+  line-height: 1.5;
+}
+
+.form-checkbox span a {
+  color: var(--clr-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ── STEP NAV BUTTONS ─────────────────────────────────────── */
+.step-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--clr-border);
+  gap: 1rem;
+}
+
+.btn-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  font-family: var(--font-condensed);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--clr-text-muted);
+  border: 1px solid var(--clr-border);
+  border-radius: 2px;
+  background: transparent;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-back:hover {
+  color: var(--clr-white);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.btn-next {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  font-family: var(--font-condensed);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  background: var(--clr-accent);
+  color: var(--clr-bg);
+  border-radius: 2px;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-next:hover {
+  background: var(--clr-accent-dim);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(174, 254, 2, 0.25);
+}
+
+.btn-next:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* ── BOOKING SIDEBAR ──────────────────────────────────────── */
+.booking-sidebar {
+  position: sticky;
+  top: calc(var(--nav-height) + 100px);
+}
+
+.booking-summary {
+  background: var(--clr-bg-card);
+  border: 1px solid var(--clr-border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.summary-header {
+  padding: 1.25rem 1.5rem;
+  background: rgba(174, 254, 2, 0.05);
+  border-bottom: 1px solid var(--clr-border);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.summary-header i {
+  color: var(--clr-accent);
+}
+
+.summary-header h4 {
+  font-family: var(--font-condensed);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--clr-accent);
+}
+
+.summary-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.summary-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.summary-item-label {
+  font-family: var(--font-condensed);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--clr-text-muted);
+}
+
+.summary-item-value {
+  font-family: var(--font-condensed);
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--clr-white);
+}
+
+.summary-item-value.empty {
+  color: var(--clr-border);
+  font-style: italic;
+  font-family: var(--font-body);
+  text-transform: none;
+  font-weight: 300;
+  font-size: 0.82rem;
+}
+
+.summary-divider {
+  height: 1px;
+  background: var(--clr-border);
+}
+
+.summary-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  padding: 1rem 1.5rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-top: 1px solid var(--clr-border);
+}
+
+.summary-note i {
+  color: var(--clr-accent);
+  font-size: 0.8rem;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.summary-note p {
+  font-size: 0.78rem;
+  color: var(--clr-text-muted);
+  line-height: 1.55;
+}
+
+/* ── CONFIRMATION ─────────────────────────────────────────── */
+.booking-confirmation {
+  display: none;
+  text-align: center;
+  padding: clamp(4rem, 8vh, 7rem) 0;
+}
+
+.booking-confirmation.visible {
+  display: block;
+}
+
+.confirmation-icon {
+  width: 80px;
+  height: 80px;
+  background: rgba(174, 254, 2, 0.1);
+  border: 2px solid var(--clr-accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: var(--clr-accent);
+  margin: 0 auto 2rem;
+  animation: confirmPulse 1s ease forwards;
+}
+
+@keyframes confirmPulse {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.confirmation-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.confirmation-title em {
+  font-style: normal;
+  color: var(--clr-accent);
+}
+
+.confirmation-text {
+  font-size: 0.95rem;
+  color: var(--clr-text-muted);
+  max-width: 480px;
+  margin: 0 auto 3rem;
+  line-height: 1.7;
+}
+
+.confirmation-details {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0;
+  background: var(--clr-bg-card);
+  border: 1px solid var(--clr-border);
+  border-radius: 2px;
+  overflow: hidden;
+  text-align: left;
+  min-width: 320px;
+  margin-bottom: 3rem;
+}
+
+.conf-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.conf-row:last-child {
+  border-bottom: none;
+}
+
+.conf-label {
+  font-family: var(--font-condensed);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--clr-text-muted);
+}
+
+.conf-value {
+  font-family: var(--font-condensed);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--clr-white);
+}
+
+.confirmation-btns {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ── RESPONSIVE ───────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .booking-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-sidebar {
+    position: static;
+    order: -1;
+  }
+
+  .booking-summary {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .summary-header {
+    grid-column: 1 / -1;
+  }
+
+  .summary-note {
+    grid-column: 1 / -1;
+  }
+
+  .step2-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .booking-progress-inner {
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .booking-progress-inner::-webkit-scrollbar {
+    display: none;
+  }
+
+  .progress-step {
+    min-width: 140px;
+    padding: 1rem 1.25rem;
+  }
+
+  .progress-step-title {
+    font-size: 0.75rem;
+  }
+
+  .course-select-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-summary {
+    display: block;
+  }
+
+  .step-nav {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .btn-back,
+  .btn-next {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .timeslots {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .confirmation-details {
+    min-width: unset;
+    width: 100%;
+  }
+}
+
+@media (max-width: 430px) {
+  .progress-step {
+    min-width: 120px;
+    padding: 0.875rem 1rem;
+    gap: 0.6rem;
+  }
+
+  .progress-step-num {
+    width: 28px;
+    height: 28px;
+    font-size: 0.7rem;
+  }
+
+  .timeslots {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .confirmation-btns {
+    flex-direction: column;
+  }
+
+  .confirmation-btns .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* 4K */
+@media (min-width: 3840px) {
+  .booking-layout {
+    grid-template-columns: 1fr 480px;
+    gap: 5rem;
+  }
+
+  .progress-step {
+    padding: 2rem 3rem;
+    gap: 1.5rem;
+  }
+
+  .progress-step-num {
+    width: 52px;
+    height: 52px;
+    font-size: 1.1rem;
+  }
+
+  .progress-step-title {
+    font-size: 1.1rem;
+  }
+
+  .course-select-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

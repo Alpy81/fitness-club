@@ -1,0 +1,517 @@
+/* ============================================================
+   FIT TRAINING CENTER — team.css
+   Team & Trainer Seite
+   ============================================================ */
+
+/* ── PAGE HERO ────────────────────────────────────────────── */
+.page-hero {
+  position: relative;
+  height: 65vh;
+  min-height: 480px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.page-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.page-hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+}
+
+.page-hero-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+      to top,
+      rgba(10, 10, 10, 1) 0%,
+      rgba(10, 10, 10, 0.5) 50%,
+      rgba(10, 10, 10, 0.2) 100%
+    ),
+    linear-gradient(to right, rgba(10, 10, 10, 0.7) 0%, transparent 70%);
+}
+
+.page-hero-content {
+  position: relative;
+  z-index: 1;
+  padding-bottom: clamp(3rem, 6vh, 5rem);
+  width: 100%;
+}
+
+.page-hero-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.page-hero-eyebrow::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: var(--clr-accent);
+}
+
+.page-hero-eyebrow span {
+  font-family: var(--font-condensed);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--clr-accent);
+}
+
+.page-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 8vw, 8rem);
+  line-height: 0.92;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.page-hero-title em {
+  font-style: normal;
+  color: var(--clr-accent);
+}
+
+/* ── INTRO STRIP ──────────────────────────────────────────── */
+.team-intro {
+  padding: clamp(4rem, 8vh, 6rem) 0;
+  border-bottom: 1px solid var(--clr-border);
+}
+
+.team-intro .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(3rem, 6vw, 8rem);
+  align-items: center;
+}
+
+.team-intro-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  line-height: 1;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.team-intro-title em {
+  font-style: normal;
+  color: var(--clr-accent);
+}
+
+.team-intro-text {
+  font-size: clamp(0.9rem, 1.4vw, 1rem);
+  color: var(--clr-text-muted);
+  line-height: 1.8;
+}
+
+.team-intro-stats {
+  display: flex;
+  gap: 3rem;
+}
+
+.team-intro-stat .num {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  line-height: 1;
+  color: var(--clr-accent);
+  display: block;
+}
+
+.team-intro-stat .lbl {
+  font-family: var(--font-condensed);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--clr-text-muted);
+  margin-top: 0.25rem;
+  display: block;
+}
+
+/* ── TRAINER GRID ─────────────────────────────────────────── */
+.trainers-section {
+  padding: clamp(4rem, 8vh, 7rem) 0;
+}
+
+.trainers-section-header {
+  margin-bottom: 3rem;
+}
+
+.trainers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* Trainer Card */
+.trainer-card {
+  position: relative;
+  background: var(--clr-bg-card);
+  border-radius: 2px;
+  overflow: hidden;
+  border: 1px solid var(--clr-border);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.trainer-card:hover {
+  border-color: rgba(174, 254, 2, 0.25);
+  transform: translateY(-6px);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+}
+
+.trainer-img-wrap {
+  position: relative;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+}
+
+.trainer-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.7s ease;
+  filter: grayscale(20%);
+}
+
+.trainer-card:hover .trainer-img-wrap img {
+  transform: scale(1.05);
+  filter: grayscale(0%);
+}
+
+/* Overlay on hover */
+.trainer-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(10, 10, 10, 0.95) 0%,
+    rgba(10, 10, 10, 0.2) 60%,
+    transparent 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.trainer-card:hover .trainer-overlay {
+  opacity: 1;
+}
+
+.trainer-bio {
+  font-size: 0.82rem;
+  color: #aefe02;
+  line-height: 1.65;
+  margin-bottom: 1.25rem;
+}
+
+.trainer-social {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.trainer-social a {
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  color: var(--clr-white);
+  transition: var(--transition);
+}
+
+.trainer-social a:hover {
+  background: var(--clr-accent);
+  border-color: var(--clr-accent);
+  color: var(--clr-bg);
+}
+
+/* Card Body */
+.trainer-body {
+  padding: 1.5rem 1.75rem;
+}
+
+.trainer-specialty {
+  display: inline-block;
+  font-family: var(--font-condensed);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--clr-accent);
+  margin-bottom: 0.5rem;
+}
+
+.trainer-name {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 0.35rem;
+}
+
+.trainer-role {
+  font-family: var(--font-condensed);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--clr-text-muted);
+  margin-bottom: 1.25rem;
+}
+
+.trainer-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.trainer-tag {
+  font-family: var(--font-condensed);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.6rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--clr-border);
+  border-radius: 1px;
+  color: var(--clr-text-muted);
+  transition: var(--transition);
+}
+
+.trainer-card:hover .trainer-tag {
+  border-color: rgba(174, 254, 2, 0.2);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ── FEATURED TRAINER ─────────────────────────────────────── */
+.featured-trainer {
+  padding: clamp(4rem, 8vh, 7rem) 0;
+  background: var(--clr-bg-section);
+  border-top: 1px solid var(--clr-border);
+  border-bottom: 1px solid var(--clr-border);
+}
+
+.featured-trainer .container {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: clamp(3rem, 6vw, 8rem);
+  align-items: center;
+}
+
+.featured-img-wrap {
+  position: relative;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.featured-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.8s ease;
+}
+
+.featured-img-wrap:hover img {
+  transform: scale(1.03);
+}
+
+.featured-accent {
+  position: absolute;
+  bottom: 2rem;
+  right: -1.5rem;
+  background: var(--clr-accent);
+  color: var(--clr-bg);
+  padding: 1.25rem 1.5rem;
+  border-radius: 2px;
+  text-align: center;
+}
+
+.featured-accent .big {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  line-height: 1;
+  display: block;
+}
+
+.featured-accent .small {
+  font-family: var(--font-condensed);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  display: block;
+  margin-top: 0.2rem;
+}
+
+.featured-content {
+}
+
+.featured-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-condensed);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--clr-accent);
+  margin-bottom: 0.75rem;
+}
+
+.featured-label i {
+  font-size: 0.6rem;
+}
+
+.featured-name {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 5vw, 5rem);
+  text-transform: uppercase;
+  line-height: 0.92;
+  margin-bottom: 0.5rem;
+}
+
+.featured-title {
+  font-family: var(--font-condensed);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--clr-text-muted);
+  margin-bottom: 2rem;
+}
+
+.featured-quote {
+  font-size: clamp(1rem, 1.6vw, 1.15rem);
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.7;
+  border-left: 3px solid var(--clr-accent);
+  padding-left: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.featured-certs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 2.5rem;
+}
+
+.featured-cert {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--clr-text-muted);
+}
+
+.featured-cert i {
+  color: var(--clr-accent);
+  font-size: 0.75rem;
+  flex-shrink: 0;
+}
+
+/* ── JOIN CTA ─────────────────────────────────────────────── */
+.team-cta {
+  padding: clamp(4rem, 8vh, 6rem) 0;
+  text-align: center;
+}
+
+.team-cta h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.team-cta h2 em {
+  font-style: normal;
+  color: var(--clr-accent);
+}
+
+.team-cta p {
+  color: var(--clr-text-muted);
+  font-size: 0.95rem;
+  max-width: 480px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.7;
+}
+
+.team-cta-btns {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ── RESPONSIVE ───────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .trainers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .team-intro .container,
+  .featured-trainer .container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .featured-accent {
+    right: 1rem;
+    bottom: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .trainers-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .trainer-overlay {
+    opacity: 1;
+    background: linear-gradient(
+      to top,
+      rgba(10, 10, 10, 0.9) 0%,
+      transparent 60%
+    );
+  }
+
+  .trainer-bio {
+    display: none;
+  }
+
+  .team-intro-stats {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-intro-stats {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}

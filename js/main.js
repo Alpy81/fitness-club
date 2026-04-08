@@ -358,6 +358,27 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // ── Cookie Banner ─────────────────────────────────────────
+  const cookieBanner = document.getElementById("cookieBanner");
+  const cookieAccept = document.getElementById("cookieAccept");
+  const cookieNecessary = document.getElementById("cookieNecessary");
+
+  if (cookieBanner) {
+    if (!localStorage.getItem("cookieConsent")) {
+      setTimeout(() => cookieBanner.classList.add("visible"), 800);
+    }
+    function closeCookieBanner(value) {
+      cookieBanner.classList.remove("visible");
+      localStorage.setItem("cookieConsent", value);
+    }
+    if (cookieAccept)
+      cookieAccept.addEventListener("click", () => closeCookieBanner("all"));
+    if (cookieNecessary)
+      cookieNecessary.addEventListener("click", () =>
+        closeCookieBanner("necessary")
+      );
+  }
+
   // ── Booking Flow ─────────────────────────────────────────
   const bookingMain = document.getElementById("bookingMain");
   if (!bookingMain) return;
@@ -591,31 +612,5 @@ document.addEventListener("DOMContentLoaded", () => {
       confirmation.classList.add("visible");
       window.scrollTo({ top: bookingMain.offsetTop - 80, behavior: "smooth" });
     });
-  }
-
-  // ── Cookie Banner ─────────────────────────────────────────
-  const cookieBanner = document.getElementById("cookieBanner");
-  const cookieAccept = document.getElementById("cookieAccept");
-  const cookieNecessary = document.getElementById("cookieNecessary");
-
-  if (cookieBanner) {
-    if (!localStorage.getItem("cookieConsent")) {
-      setTimeout(() => cookieBanner.classList.add("visible"), 800);
-    }
-
-    function closeCookieBanner(value) {
-      cookieBanner.classList.remove("visible");
-      localStorage.setItem("cookieConsent", value);
-    }
-
-    if (cookieAccept) {
-      cookieAccept.addEventListener("click", () => closeCookieBanner("all"));
-    }
-
-    if (cookieNecessary) {
-      cookieNecessary.addEventListener("click", () =>
-        closeCookieBanner("necessary")
-      );
-    }
   }
 });

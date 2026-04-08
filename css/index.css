@@ -49,9 +49,6 @@
   gap: 2rem;
 }
 
-.hero-left {
-}
-
 .hero-tag {
   display: inline-flex;
   align-items: center;
@@ -222,9 +219,6 @@
   grid-template-columns: 1fr 1fr;
   gap: clamp(3rem, 6vw, 8rem);
   align-items: center;
-}
-
-.intro-left {
 }
 
 .intro-title {
@@ -582,9 +576,9 @@
   padding: clamp(4rem, 10vh, 8rem) 0;
 }
 
-.membership-teaser .container {
+.plans-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 1px;
   background: var(--clr-border);
 }
@@ -599,7 +593,6 @@
 .plan-card.featured {
   background: var(--clr-accent);
 }
-
 .plan-card:hover:not(.featured) {
   background: #1a1a1a;
 }
@@ -730,7 +723,6 @@
   border-color: var(--clr-accent);
   color: var(--clr-accent);
 }
-
 .plan-card.featured .plan-btn:hover {
   background: rgba(0, 0, 0, 0.85);
 }
@@ -746,7 +738,6 @@
   .hero-scroll {
     display: none;
   }
-
   .intro .container {
     grid-template-columns: 1fr;
     gap: 3rem;
@@ -756,7 +747,6 @@
     right: 1rem;
     bottom: 1rem;
   }
-
   .features-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -770,11 +760,9 @@
   .feature-item:nth-child(2) {
     border-bottom: 1px solid var(--clr-border);
   }
-
   .courses-grid {
     grid-template-columns: 1fr 1fr;
   }
-
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -785,30 +773,22 @@
   .stat-item:nth-child(2) {
     border-bottom: 1px solid var(--clr-border);
   }
-
-  .membership-teaser .container {
-    grid-template-columns: 1fr;
-  }
 }
 
 @media (max-width: 768px) {
   .hero-title {
     font-size: clamp(3rem, 14vw, 5rem);
   }
-
   .courses-header {
     flex-direction: column;
     align-items: flex-start;
   }
-
   .courses-grid {
     grid-template-columns: 1fr;
   }
-
   .course-card {
-    aspect-ratio: 16/9;
+    aspect-ratio: 4/3;
   }
-
   .features-grid {
     grid-template-columns: 1fr;
   }
@@ -819,9 +799,21 @@
   .feature-item:last-child {
     border-bottom: none;
   }
-
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .plans-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1rem;
+    background: transparent !important;
+  }
+
+  .plans-grid .plan-card {
+    width: 100%;
+    border: 1px solid var(--clr-border);
+    border-radius: 2px;
   }
 }
 
@@ -833,6 +825,12 @@
   .hero-actions .btn {
     width: 100%;
     justify-content: center;
+  }
+}
+
+@media (max-width: 430px) {
+  .plans-grid .plan-card {
+    padding: 2rem 1.75rem;
   }
 }
 

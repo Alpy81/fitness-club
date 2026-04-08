@@ -727,6 +727,17 @@
   background: rgba(0, 0, 0, 0.85);
 }
 
+/* Nur auf iPad sichtbar */
+.course-card-ipad-only {
+  display: none;
+}
+
+@media (min-width: 430px) and (max-width: 1024px) {
+  .course-card-ipad-only {
+    display: block;
+  }
+}
+
 /* ── RESPONSIVE ───────────────────────────────────────── */
 @media (max-width: 1024px) {
   .hero-content .container {

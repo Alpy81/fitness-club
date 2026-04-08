@@ -428,7 +428,7 @@ button {
 
 .footer-col ul li a {
   font-size: 0.9rem;
-  color: var(--clr-text-muted);
+  color: var(--clr-white);
   transition: var(--transition);
 }
 
@@ -453,7 +453,7 @@ button {
 
 .footer-contact-item span {
   font-size: 0.9rem;
-  color: var(--clr-text-muted);
+  color: var(--clr-white);
   line-height: 1.5;
 }
 
@@ -466,9 +466,13 @@ button {
   gap: 1rem;
 }
 
+footer .footer-p {
+  color: var(--clr-white);
+}
+
 .footer-bottom p {
   font-size: 0.8rem;
-  color: var(--clr-text-muted);
+  color: var(--clr-accent);
 }
 
 .footer-bottom-links {
@@ -478,7 +482,7 @@ button {
 
 .footer-bottom-links a {
   font-size: 0.8rem;
-  color: var(--clr-text-muted);
+  color: var(--clr-accent);
   transition: var(--transition);
 }
 

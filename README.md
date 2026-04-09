@@ -204,8 +204,6 @@ This project is licensed under the MIT License — feel free to use it as a refe
 
 <div align="center">
 
-<img src="/assets/websylon.png" alt="WEBSYLON" width="200" />
-
 **WEBSYLON** — Professional Web Development & Digital Solutions
 
 _Frankfurt am Main, Germany_

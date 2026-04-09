@@ -200,17 +200,7 @@ This project is licensed under the MIT License — feel free to use it as a refe
 
 ---
 
-## 👨‍💻 Developer
-
-Portfolio reference project demonstrating:
-
-- Advanced CSS architecture with custom design systems
-- Vanilla JavaScript interaction patterns
-- Responsive design from 320px to 4K
-- GDPR-compliant frontend implementation
-- Professional UX patterns for fitness industry websites
-
----
+## 👨‍💻 Built
 
 <div align="center">
 
@@ -229,4 +219,3 @@ _Frankfurt am Main, Germany_
 </div>
 
 _FIT Training Center is a demo project and not a real business._
-# fit-training-center

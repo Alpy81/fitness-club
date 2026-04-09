@@ -229,3 +229,4 @@ _Frankfurt am Main, Germany_
 </div>
 
 _FIT Training Center is a demo project and not a real business._
+# fit-training-center

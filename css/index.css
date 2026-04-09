@@ -236,7 +236,7 @@
 
 .intro-text {
   font-size: clamp(0.95rem, 1.5vw, 1.05rem);
-  color: var(--clr-text-muted);
+  color: var(--clr-white);
   line-height: 1.8;
   margin-bottom: 2.5rem;
   max-width: 480px;
@@ -519,7 +519,7 @@
 
 .motivation-sub {
   font-size: clamp(0.9rem, 1.5vw, 1.1rem);
-  color: rgba(255, 255, 255, 0.6);
+  color: white;
   letter-spacing: 0.05em;
   margin-bottom: 3rem;
 }

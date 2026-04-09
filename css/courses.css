@@ -489,7 +489,7 @@
 }
 
 .courses-cta p {
-  color: var(--clr-text-muted);
+  color: var(--clr-white);
   font-size: 0.95rem;
   margin-bottom: 2rem;
   max-width: 480px;

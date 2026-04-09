@@ -124,7 +124,7 @@
 
 .mission-text {
   font-size: clamp(0.95rem, 1.4vw, 1.05rem);
-  color: var(--clr-text-muted);
+  color: var(--clr-white);
   line-height: 1.85;
   margin-bottom: 1.5rem;
 }

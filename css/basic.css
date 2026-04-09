@@ -380,7 +380,7 @@ button {
 
 .footer-brand p {
   font-size: 0.9rem;
-  color: var(--clr-text-muted);
+  color: var(--clr-white);
   line-height: 1.7;
   max-width: 280px;
 }
@@ -464,10 +464,6 @@ button {
   padding-top: var(--space-md);
   flex-wrap: wrap;
   gap: 1rem;
-}
-
-footer .footer-p {
-  color: var(--clr-white);
 }
 
 .footer-bottom p {

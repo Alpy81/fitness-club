@@ -489,22 +489,30 @@
   }
 
   .timeline-item {
-    grid-template-columns: 60px 1fr;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
     gap: 0;
+    margin-bottom: 2rem;
   }
 
   .timeline-item:nth-child(odd) .timeline-content,
   .timeline-item:nth-child(even) .timeline-content {
-    grid-column: 2;
+    grid-column: unset;
     text-align: left;
     padding-left: 1.5rem;
     padding-right: 0;
+    flex: 1;
   }
 
   .timeline-item:nth-child(odd) .timeline-dot,
   .timeline-item:nth-child(even) .timeline-dot {
-    grid-column: 1;
-    justify-content: flex-start;
+    grid-column: unset;
+    display: flex;
+    justify-content: center;
+    width: 40px;
+    flex-shrink: 0;
+    padding-top: 0.4rem;
   }
 
   .timeline-item:nth-child(odd) .timeline-empty,
@@ -514,6 +522,7 @@
 
   .timeline-dot-inner {
     position: relative;
+    flex-shrink: 0;
   }
 
   .timeline-dot-inner::after {
@@ -521,10 +530,31 @@
     position: absolute;
     left: 50%;
     top: 14px;
-    width: 1px;
-    height: 80px;
+    width: 2px;
+    height: 120px;
     background: linear-gradient(to bottom, var(--clr-accent), transparent);
     transform: translateX(-50%);
+  }
+
+  /* 2013, 2019, 2026 — odd items zurücksetzen */
+  .timeline-item:nth-child(odd) {
+    flex-direction: row;
+  }
+
+  /* 2016, 2023 — even items ebenfalls in gleiche Richtung */
+  .timeline-item:nth-child(even) {
+    flex-direction: row;
+  }
+
+  /* Dot immer zuerst — vor dem Content */
+  .timeline-item:nth-child(odd) .timeline-dot,
+  .timeline-item:nth-child(even) .timeline-dot {
+    order: 1;
+  }
+
+  .timeline-item:nth-child(odd) .timeline-content,
+  .timeline-item:nth-child(even) .timeline-content {
+    order: 2;
   }
 }
 
